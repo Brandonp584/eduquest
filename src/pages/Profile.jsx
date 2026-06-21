@@ -1,11 +1,24 @@
 import AppLayout from "../components/AppLayout";
-import { getProfile, getLevel } from "../utils/profile";
+import { 
+    getProfile,
+    getLevel,
+    avatars,
+    updateAvatar,
+    getSelectedAvatar
+} from "../utils/profile";
 import { getAchievements } from "../utils/achievements";
 
 export default function Profile() {
   const profile = getProfile();
   const level = getLevel(profile.totalXp);
   const achievements = getAchievements(profile);
+
+  const selectedAvatar = getSelectedAvatar();
+
+  function handleAvatarSelect(avatarId) {
+    updateAvatar(avatarId);
+    window.location.reload();
+  }
 
   const nextLevelXp =
     profile.totalXp >= 500 ? 500 :
@@ -25,7 +38,7 @@ export default function Profile() {
         <p>Your EduQuest learning progress.</p>
 
         <div className="profile-card">
-          <div className="avatar">🧙‍♂️</div>
+          <div className="avatar">{selectedAvatar.icon}</div>
 
           <h2>{level}</h2>
           <p>⭐ {profile.totalXp} XP</p>
@@ -40,6 +53,25 @@ export default function Profile() {
           <p>
             Progress to next level: {progressPercent}%
           </p>
+        </div>
+
+        <h2>Choose Your Avatar 🎨</h2>
+
+        <div className="avatar-grid">
+            {avatars.map((avatar) => (
+                <button 
+                    key={avatar.id}
+                    className={
+                        selectedAvatar.id === avatar.id 
+                          ? "avatar-option selected"
+                          : "avatar-option"
+                    }
+                    onClick={() => handleAvatarSelect(avatar.id)}
+                >
+                    <span>{avatar.icon}</span>
+                    <strong>{avatar.name}</strong>
+                </button>
+            ))}
         </div>
 
         <div className="profile-stats">

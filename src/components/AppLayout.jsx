@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
-import { getProfile, getLevel } from "../utils/profile";
+import { 
+    getProfile,
+    getLevel,
+    getSelectedAvatar
+} from "../utils/profile";
 
 export default function AppLayout({ children }) {
   const profile = getProfile();
   const level = getLevel(profile.totalXp);
+  const selectedAvatar = getSelectedAvatar();
 
   return (
     <main className="app-shell">
@@ -14,7 +19,7 @@ export default function AppLayout({ children }) {
         <p className="tagline">Learn • Play • Grow</p>
 
         <div className="avatar-card">
-          <div className="avatar">🧙‍♂️</div>
+          <div className="avatar">{selectedAvatar.icon}</div>
           <h2>{level}</h2>
           <p>{profile.totalXp} XP</p>
         </div>
