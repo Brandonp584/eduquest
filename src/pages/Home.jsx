@@ -18,6 +18,7 @@ export default function Home() {
 
         <div className="xp-card">
           <strong>⭐ {profile.totalXp} XP</strong>
+          <span>🪙 {profile.coins} Coins</span>
           <span>{level}</span>
         </div>
       </header>
@@ -28,7 +29,7 @@ export default function Home() {
           <span className="map-icon tree-icon">🌳</span>
           <span className="map-icon mountain-icon">⛰️</span>
           <span className="map-icon rocket-icon">🚀</span>
-          
+
           <Link 
             to="/world/maths"
             className="map-node maths"

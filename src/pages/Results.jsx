@@ -9,7 +9,7 @@ export default function Results() {
 
   useEffect(() => {
     if (result) {
-      addQuestResult(result.questId, result.xpReward);
+      addQuestResult(result.questId, result.xpReward, result.coinReward || 5);
     }
   }, [result]);
 
@@ -44,6 +44,7 @@ export default function Results() {
 
         <p>Accuracy: {percentage}%</p>
         <p>XP Earned: {result.xpReward}</p>
+        <p>Coins Earned: 🪙 {result.coinReward || 5}</p>
 
         <h3>Student Progress</h3>
         <p>Level: {level}</p>

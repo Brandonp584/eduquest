@@ -23,6 +23,7 @@ export function getProfile() {
 
   return {
     totalXp: 0,
+    coins: 0,
     questsSolved: 0,
     completedQuests: [],
     selectedAvatar: "wizard",
@@ -60,7 +61,7 @@ export function getSelectedAvatar() {
   );
 }
 
-export function addQuestResult(questId, xpReward) {
+export function addQuestResult(questId, xpReward, coinRewards = 5) {
   const profile = getProfile();
 
   if (profile.completedQuests.includes(questId)) {
@@ -68,6 +69,7 @@ export function addQuestResult(questId, xpReward) {
   }
 
   profile.totalXp += xpReward;
+  profile.coins += coinRewards;
   profile.questsSolved += 1;
   profile.completedQuests.push(questId);
 

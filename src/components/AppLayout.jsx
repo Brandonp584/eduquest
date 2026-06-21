@@ -22,6 +22,7 @@ export default function AppLayout({ children }) {
           <div className="avatar">{selectedAvatar.icon}</div>
           <h2>{level}</h2>
           <p>{profile.totalXp} XP</p>
+          <p>🪙 {profile.coins} Coins</p>
         </div>
 
         <nav className="side-nav">
