@@ -16,7 +16,7 @@ export default function Home() {
           <p>Choose a world, complete quests, earn coins, and unlock rewards.</p>
 
           <div className="hero-actions">
-            <Link to="/profile" className="start-btn">
+            <Link to="/profile" className="primary-btn">
               View Profile
             </Link>
           </div>

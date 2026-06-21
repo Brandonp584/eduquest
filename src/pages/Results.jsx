@@ -20,7 +20,7 @@ export default function Results() {
         <section className="quests-section">
           <h1>No Results Found</h1>
           <p>Please complete a quest first.</p>
-          <Link className="start-btn" to="/">
+          <Link className="primary-btn" to="/">
             Back to Home
           </Link>
         </section>
@@ -52,7 +52,7 @@ export default function Results() {
         <p>Total XP: {profile.totalXp}</p>
         <p>Quests Solved: {profile.questsSolved}</p>
 
-        <Link className="start-btn" to="/">
+        <Link className="primary-btn" to="/">
           Choose Another Quest
         </Link>
       </section>

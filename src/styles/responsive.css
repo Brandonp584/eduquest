@@ -95,6 +95,19 @@
   .pet-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .quest-hero {
+    grid-template-columns: 1fr 220px;
+    align-items: center;
+  }
+
+  .quest-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quest-actions {
+    grid-template-columns: 160px 1fr;
+  }
 }
 
 /* LARGE DESKTOP */

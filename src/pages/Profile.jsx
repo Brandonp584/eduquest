@@ -91,7 +91,7 @@ export default function Profile() {
           <p>Come back every day to earn bonus coins.</p>
 
           <button
-            className="start-btn"
+            className="primary-btn"
             onClick={handleDailyReward}
             disabled={!canClaimReward}
           >
