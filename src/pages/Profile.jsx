@@ -1,30 +1,49 @@
 import AppLayout from "../components/AppLayout";
-import { 
-    getProfile,
-    getLevel,
-    avatars,
-    updateAvatar,
-    getSelectedAvatar
-} from "../utils/profile";
+import { getProfile } from "../utils/profile";
+import { getLevel } from "../utils/levels";
+import {
+  avatars,
+  updateAvatar,
+  getSelectedAvatar,
+} from "../utils/avatars";
+import {
+  pets,
+  getSelectedPet,
+  buyPet,
+  updatePet,
+} from "../utils/pets";
 import { getAchievements } from "../utils/achievements";
 
 export default function Profile() {
   const profile = getProfile();
   const level = getLevel(profile.totalXp);
   const achievements = getAchievements(profile);
-
   const selectedAvatar = getSelectedAvatar();
+  const selectedPet = getSelectedPet();
 
   function handleAvatarSelect(avatarId) {
     updateAvatar(avatarId);
     window.location.reload();
   }
 
+  function handleBuyPet(petId) {
+    buyPet(petId);
+    window.location.reload();
+  }
+
+  function handlePetSelect(petId) {
+    updatePet(petId);
+    window.location.reload();
+  }
+
   const nextLevelXp =
-    profile.totalXp >= 500 ? 500 :
-    profile.totalXp >= 250 ? 500 :
-    profile.totalXp >= 100 ? 250 :
-    100;
+    profile.totalXp >= 500
+      ? 500
+      : profile.totalXp >= 250
+      ? 500
+      : profile.totalXp >= 100
+      ? 250
+      : 100;
 
   const progressPercent = Math.min(
     Math.round((profile.totalXp / nextLevelXp) * 100),
@@ -42,6 +61,10 @@ export default function Profile() {
 
           <h2>{level}</h2>
           <p>⭐ {profile.totalXp} XP</p>
+          <p>🪙 {profile.coins} Coins</p>
+          <p>
+            Pet: {selectedPet.icon} {selectedPet.name}
+          </p>
 
           <div className="progress-bar">
             <div
@@ -50,9 +73,7 @@ export default function Profile() {
             />
           </div>
 
-          <p>
-            Progress to next level: {progressPercent}%
-          </p>
+          <p>Progress to next level: {progressPercent}%</p>
         </div>
 
         <h2>Choose Your Avatar 🎨</h2>
@@ -66,15 +87,15 @@ export default function Profile() {
                 key={avatar.id}
                 className={
                   selectedAvatar.id === avatar.id
-                  ? "avatar-option selected"
-                  : isLocked
-                  ? "avatar-option locked"
-                  : "avatar-option"
+                    ? "avatar-option selected"
+                    : isLocked
+                    ? "avatar-option locked"
+                    : "avatar-option"
                 }
-                  onClick={() => {
-                    if (!isLocked) {
-                      handleAvatarSelect(avatar.id);
-                    }
+                onClick={() => {
+                  if (!isLocked) {
+                    handleAvatarSelect(avatar.id);
+                  }
                 }}
                 disabled={isLocked}
               >
@@ -85,6 +106,49 @@ export default function Profile() {
                   <small>🔒 Unlock at {avatar.requiredXp} XP</small>
                 ) : (
                   <small>Unlocked</small>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        <h2>Pet Companions 🐾</h2>
+        <p>Use coins to unlock a learning buddy.</p>
+
+        <div className="pet-grid">
+          {pets.map((pet) => {
+            const isOwned = profile.ownedPets.includes(pet.id);
+            const canAfford = profile.coins >= pet.cost;
+            const isSelected = selectedPet.id === pet.id;
+
+            return (
+              <button
+                key={pet.id}
+                className={
+                  isSelected
+                    ? "pet-option selected"
+                    : isOwned
+                    ? "pet-option"
+                    : "pet-option locked"
+                }
+                onClick={() => {
+                  if (isOwned) {
+                    handlePetSelect(pet.id);
+                  } else if (canAfford) {
+                    handleBuyPet(pet.id);
+                  }
+                }}
+                disabled={!isOwned && !canAfford}
+              >
+                <span>{pet.icon}</span>
+                <strong>{pet.name}</strong>
+
+                {isOwned ? (
+                  <small>Owned</small>
+                ) : canAfford ? (
+                  <small>Buy for 🪙 {pet.cost}</small>
+                ) : (
+                  <small>Need 🪙 {pet.cost}</small>
                 )}
               </button>
             );
@@ -110,22 +174,22 @@ export default function Profile() {
 
         <h2>Achievements 🏆</h2>
 
-          <div className="achievement-grid">
-            {achievements.map((achievement) => (
-              <div
-                key={achievement.id}
-                className={
-                  achievement.unlocked
-                    ? "achievement unlocked"
-                    : "achievement"
-                }
-              >
-                <span>{achievement.icon}</span>
-                <h3>{achievement.title}</h3>
-                <p>{achievement.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="achievement-grid">
+          {achievements.map((achievement) => (
+            <div
+              key={achievement.id}
+              className={
+                achievement.unlocked
+                  ? "achievement unlocked"
+                  : "achievement"
+              }
+            >
+              <span>{achievement.icon}</span>
+              <h3>{achievement.title}</h3>
+              <p>{achievement.description}</p>
+            </div>
+          ))}
+        </div>
 
         <h2>Completed Quests ✅</h2>
 

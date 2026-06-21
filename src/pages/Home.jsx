@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import AppLayout from "../components/AppLayout";
 import QuestCard from "../components/QuestCard";
 import { quests } from "../data/quests";
-import { getProfile, getLevel } from "../utils/profile";
+import { getProfile } from "../utils/profile";
+import { getLevel } from "../utils/levels";
 
 export default function Home() {
   const profile = getProfile();
@@ -30,32 +31,20 @@ export default function Home() {
           <span className="map-icon mountain-icon">⛰️</span>
           <span className="map-icon rocket-icon">🚀</span>
 
-          <Link 
-            to="/world/maths"
-            className="map-node maths"
-          >
+          <Link to="/world/maths" className="map-node maths">
             Maths Kingdom
           </Link>
 
-          <Link 
-            to="/world/reading"
-            className="map-node reading"
-          >
-            Reading Forest 
+          <Link to="/world/reading" className="map-node reading">
+            Reading Forest
           </Link>
 
-          <Link 
-            to="/world/spelling"
-            className="map-node spelling"
-          >
-            Spelling Valley 
+          <Link to="/world/spelling" className="map-node spelling">
+            Spelling Valley
           </Link>
 
-          <Link 
-            to="/world/science"
-            className="map-node science"
-          >
-            Science Space 
+          <Link to="/world/science" className="map-node science">
+            Science Space
           </Link>
         </div>
       </section>

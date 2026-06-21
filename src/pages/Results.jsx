@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AppLayout from "../components/AppLayout";
-import { addQuestResult, getProfile, getLevel } from "../utils/profile";
+import { addQuestResult, getProfile } from "../utils/profile";
+import { getLevel } from "../utils/levels";
 
 export default function Results() {
   const location = useLocation();

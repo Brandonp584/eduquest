@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import { 
-    getProfile,
-    getLevel,
-    getSelectedAvatar
-} from "../utils/profile";
+import { getProfile } from "../utils/profile";
+import { getLevel } from "../utils/levels";
+import { getSelectedAvatar } from "../utils/avatars";
+import { getSelectedPet } from "../utils/pets";
 
 export default function AppLayout({ children }) {
   const profile = getProfile();
   const level = getLevel(profile.totalXp);
   const selectedAvatar = getSelectedAvatar();
+  const selectedPet = getSelectedPet();
 
   return (
     <main className="app-shell">
@@ -23,6 +23,9 @@ export default function AppLayout({ children }) {
           <h2>{level}</h2>
           <p>{profile.totalXp} XP</p>
           <p>🪙 {profile.coins} Coins</p>
+          <p className="pet-display">
+            {selectedPet.icon} {selectedPet.name}
+          </p>
         </div>
 
         <nav className="side-nav">
