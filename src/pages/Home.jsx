@@ -1,8 +1,12 @@
 import AppLayout from "../components/AppLayout";
 import QuestCard from "../components/QuestCard";
 import { quests } from "../data/quests";
+import { getProfile, getLevel } from "../utils/profile";
 
 export default function Home() {
+  const profile = getProfile();
+  const level = getLevel(profile.totalXp);
+
   return (
     <AppLayout>
       <header className="hero">
@@ -12,8 +16,8 @@ export default function Home() {
         </div>
 
         <div className="xp-card">
-          <strong>⭐ 0 XP</strong>
-          <span>Level 1 Explorer</span>
+          <strong>⭐ {profile.totalXp} XP</strong>
+          <span>{level}</span>
         </div>
       </header>
 

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { getProfile, getLevel } from "../utils/profile";
 
 export default function AppLayout({ children }) {
+  const profile = getProfile();
+  const level = getLevel(profile.totalXp);
+
   return (
     <main className="app-shell">
       <aside className="sidebar">
@@ -11,8 +15,8 @@ export default function AppLayout({ children }) {
 
         <div className="avatar-card">
           <div className="avatar">🧙‍♂️</div>
-          <h2>Explorer</h2>
-          <p>Level 1</p>
+          <h2>{level}</h2>
+          <p>{profile.totalXp} XP</p>
         </div>
 
         <nav className="side-nav">
