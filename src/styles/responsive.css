@@ -44,6 +44,10 @@
   .pet-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .world-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */
@@ -101,6 +105,10 @@
   .avatar-grid,
   .pet-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .world-panel {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

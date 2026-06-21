@@ -24,29 +24,26 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="map-panel">
-        <div className="map-path">
-          <span className="map-icon castle-icon">🏰</span>
-          <span className="map-icon tree-icon">🌳</span>
-          <span className="map-icon mountain-icon">⛰️</span>
-          <span className="map-icon rocket-icon">🚀</span>
+      <section className="world-panel">
+        <Link to="/world/maths" className="world-card maths-world">
+          <span>🏰</span>
+          <strong>Maths Kingdom</strong>
+        </Link>
 
-          <Link to="/world/maths" className="map-node maths">
-            Maths Kingdom
-          </Link>
+        <Link to="/world/reading" className="world-card reading-world">
+          <span>🌳</span>
+          <strong>Reading Forest</strong>
+        </Link>
 
-          <Link to="/world/reading" className="map-node reading">
-            Reading Forest
-          </Link>
+        <Link to="/world/spelling" className="world-card spelling-world">
+          <span>✏️</span>
+          <strong>Spelling Valley</strong>
+        </Link>
 
-          <Link to="/world/spelling" className="map-node spelling">
-            Spelling Valley
-          </Link>
-
-          <Link to="/world/science" className="map-node science">
-            Science Space
-          </Link>
-        </div>
+        <Link to="/world/science" className="world-card science-world">
+          <span>🚀</span>
+          <strong>Science Space</strong>
+        </Link>
       </section>
 
       <section className="quests-section">
