@@ -1,25 +1,29 @@
+/* QUEST GRID */
+
 .quest-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
+/* QUEST CARD */
+
 .quest-card {
   background: white;
   border-radius: 26px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .quest-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: 0 18px 38px rgba(15, 23, 42, 0.16);
 }
 
 .quest-image {
   position: relative;
-  min-height: 140px;
+  min-height: 160px;
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, #bae6fd, #dcfce7);
@@ -28,6 +32,8 @@
 .quest-emoji {
   font-size: 4.5rem;
 }
+
+/* QUEST TAGS */
 
 .quest-tags {
   position: absolute;
@@ -40,7 +46,7 @@
 
 .tag {
   color: white;
-  padding: 0.35rem 0.7rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
@@ -54,8 +60,10 @@
   background: var(--green);
 }
 
+/* QUEST CONTENT */
+
 .quest-content {
-  padding: 1rem;
+  padding: 1.25rem;
   text-align: center;
 }
 
@@ -66,6 +74,7 @@
 
 .quest-content p {
   color: var(--muted);
+  margin: 0.75rem 0;
 }
 
 .quest-footer {
@@ -75,4 +84,60 @@
 
 .xp {
   font-weight: 700;
+  color: var(--blue);
+}
+
+/* YEAR SELECTOR */
+
+.year-tabs {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0 1rem;
+  margin: 1rem 0;
+  scrollbar-width: none;
+}
+
+.year-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.year-tab {
+  border: none;
+  white-space: nowrap;
+  background: #eff6ff;
+  color: var(--text);
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.year-tab:hover {
+  background: #dbeafe;
+  transform: translateY(-2px);
+}
+
+.year-tab.active {
+  background: linear-gradient(135deg, var(--sky), var(--blue));
+  color: white;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+  background: white;
+  border: 2px dashed #cbd5e1;
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin-top: 0;
+}
+
+.empty-state p {
+  color: var(--muted);
 }
