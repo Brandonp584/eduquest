@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import AppLayout from "../components/AppLayout";
-import QuestCard from "../components/QuestCard";
-import { quests } from "../data/quests";
 import { getProfile } from "../utils/profile";
 import { getLevel } from "../utils/levels";
 
@@ -11,10 +9,17 @@ export default function Home() {
 
   return (
     <AppLayout>
-      <header className="hero">
+      <header className="hero home-hero">
         <div>
+          <span className="eyebrow">Welcome back, learner ✨</span>
           <h2>Hi, Explorer! 👋</h2>
-          <p>Choose your next learning adventure.</p>
+          <p>Choose a world, complete quests, earn coins, and unlock rewards.</p>
+
+          <div className="hero-actions">
+            <Link to="/profile" className="start-btn">
+              View Profile
+            </Link>
+          </div>
         </div>
 
         <div className="xp-card">
@@ -24,36 +29,61 @@ export default function Home() {
         </div>
       </header>
 
+      <section className="home-dashboard">
+        <div className="dashboard-stat">
+          <span>📚</span>
+          <strong>{profile.questsSolved}</strong>
+          <p>Quests Completed</p>
+        </div>
+
+        <div className="dashboard-stat">
+          <span>⭐</span>
+          <strong>{profile.totalXp}</strong>
+          <p>Total XP</p>
+        </div>
+
+        <div className="dashboard-stat">
+          <span>🪙</span>
+          <strong>{profile.coins}</strong>
+          <p>Coins</p>
+        </div>
+
+        <div className="dashboard-stat">
+          <span>🔥</span>
+          <strong>{profile.streak || 0}</strong>
+          <p>Daily Streak</p>
+        </div>
+      </section>
+
+      <section className="world-heading">
+        <h2>Choose Your Learning World 🌎</h2>
+        <p>Pick a subject world and start your next adventure.</p>
+      </section>
+
       <section className="world-panel">
         <Link to="/world/maths" className="world-card maths-world">
           <span>🏰</span>
           <strong>Maths Kingdom</strong>
+          <small>Prep → Year 7</small>
         </Link>
 
         <Link to="/world/reading" className="world-card reading-world">
           <span>🌳</span>
           <strong>Reading Forest</strong>
+          <small>Prep → Year 7</small>
         </Link>
 
         <Link to="/world/spelling" className="world-card spelling-world">
           <span>✏️</span>
           <strong>Spelling Valley</strong>
+          <small>Prep → Year 7</small>
         </Link>
 
         <Link to="/world/science" className="world-card science-world">
           <span>🚀</span>
           <strong>Science Space</strong>
+          <small>Prep → Year 7</small>
         </Link>
-      </section>
-
-      <section className="quests-section">
-        <h2>Available Quests ✨</h2>
-
-        <div className="quest-grid">
-          {quests.map((quest) => (
-            <QuestCard key={quest.id} quest={quest} />
-          ))}
-        </div>
       </section>
     </AppLayout>
   );

@@ -18,17 +18,12 @@
     font-size: 2.5rem;
   }
 
-  .map-panel {
-    min-height: 250px;
-    padding: 1.5rem;
+  .home-dashboard {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .map-path {
-    min-height: 220px;
-  }
-
-  .map-icon {
-    font-size: 3.4rem;
+  .world-panel {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .quest-grid {
@@ -42,10 +37,6 @@
 
   .avatar-grid,
   .pet-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .world-panel {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -88,14 +79,12 @@
     font-size: 3rem;
   }
 
-  .map-panel {
-    min-height: 260px;
-    border-radius: 36px;
-    padding: 2rem;
+  .home-dashboard {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .map-path {
-    min-height: 220px;
+  .world-panel {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .quest-grid {
@@ -105,10 +94,6 @@
   .avatar-grid,
   .pet-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .world-panel {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 

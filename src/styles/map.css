@@ -1,3 +1,17 @@
+.world-heading {
+  padding: 0.5rem 0 0;
+}
+
+.world-heading h2 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.world-heading p {
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+
 .world-panel {
   display: grid;
   grid-template-columns: 1fr;
@@ -5,7 +19,7 @@
 }
 
 .world-card {
-  min-height: 150px;
+  min-height: 190px;
   border-radius: 30px;
   padding: 1.5rem;
   display: grid;
@@ -14,6 +28,32 @@
   color: white;
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.world-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  top: -50px;
+  right: -45px;
+}
+
+.world-card::after {
+  content: "Start quests";
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .world-card:hover {
@@ -22,17 +62,28 @@
 }
 
 .world-card span {
-  font-size: 4rem;
+  font-size: 4.5rem;
   line-height: 1;
   filter: drop-shadow(0 5px 8px rgba(15, 23, 42, 0.25));
+  z-index: 1;
 }
 
 .world-card strong {
   font-size: 1.2rem;
   font-weight: 800;
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.24);
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
+  z-index: 1;
+}
+
+.world-card small {
+  color: white;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  z-index: 1;
 }
 
 .maths-world {
