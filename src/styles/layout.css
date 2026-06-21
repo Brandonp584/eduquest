@@ -1,0 +1,129 @@
+/* MOBILE FIRST */
+
+.app-shell {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
+}
+
+.logo {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--blue);
+}
+
+.logo span {
+  color: var(--yellow);
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 0.2rem 0 1rem;
+}
+
+.avatar-card {
+  display: none;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #bae6fd, #fef3c7);
+  border-radius: 50%;
+  border: 6px solid white;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.side-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+.side-nav a {
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  color: var(--text);
+  font-weight: 700;
+  background: #eff6ff;
+}
+
+.side-nav a:hover {
+  background: #dbeafe;
+}
+
+.main-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero h2 {
+  font-size: 2.1rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin: 0.4rem 0 0;
+}
+
+.xp-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
+  display: grid;
+  gap: 0.3rem;
+}
+
+.quests-section {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 28px;
+  padding: 1rem;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
+}
+
+.quests-section h1,
+.quests-section h2 {
+  margin-top: 0;
+}
+
+.quests-section h2 {
+  font-size: 1.7rem;
+}
+
+.start-btn {
+  display: block;
+  background: linear-gradient(135deg, var(--sky), var(--blue));
+  color: white;
+  padding: 0.85rem;
+  border-radius: 18px;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.start-btn:hover {
+  transform: scale(1.03);
+}
+
+.pet-display {
+  font-weight: 700;
+  color: var(--purple);
+}

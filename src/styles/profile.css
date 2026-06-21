@@ -1,0 +1,60 @@
+.profile-card {
+  text-align: center;
+  background: linear-gradient(135deg, #dbeafe, #dcfce7);
+  border-radius: 28px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.progress-bar {
+  height: 18px;
+  background: white;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 1rem auto;
+  max-width: 420px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, var(--sky), var(--green));
+  border-radius: 999px;
+}
+
+.profile-stats,
+.achievement-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.profile-stats div,
+.achievement {
+  background: white;
+  border-radius: 24px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.profile-stats h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--blue);
+}
+
+.achievement {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  opacity: 1;
+}
+
+.achievement.unlocked {
+  background: linear-gradient(135deg, #fef9c3, #dcfce7);
+  border: 3px solid var(--yellow);
+}
+
+.achievement span {
+  font-size: 2.5rem;
+}

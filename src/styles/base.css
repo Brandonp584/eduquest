@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap");
+
+:root {
+  --sky: #38bdf8;
+  --blue: #2563eb;
+  --yellow: #facc15;
+  --green: #22c55e;
+  --purple: #8b5cf6;
+  --orange: #fb923c;
+  --pink: #f472b6;
+
+  --text: #172554;
+  --muted: #64748b;
+  --card: #ffffff;
+  --bg: #e0f7ff;
+
+  --dark-card: #475569;
+  --dark-card-2: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Fredoka", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, #fef3c7, transparent 30%),
+    linear-gradient(135deg, #dff7ff, #f0f9ff 45%, #ecfdf5);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}

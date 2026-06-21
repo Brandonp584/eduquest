@@ -1,0 +1,112 @@
+/* TABLET */
+
+@media (min-width: 650px) {
+  .app-shell {
+    padding: 1.25rem;
+  }
+
+  .side-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .map-panel {
+    min-height: 250px;
+    padding: 1.5rem;
+  }
+
+  .map-path {
+    min-height: 220px;
+  }
+
+  .map-icon {
+    font-size: 3.4rem;
+  }
+
+  .quest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-stats,
+  .achievement-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .avatar-grid,
+  .pet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 950px) {
+  .app-shell {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 1rem;
+  }
+
+  .sidebar {
+    margin-bottom: 0;
+    padding: 1.5rem;
+    border-radius: 32px;
+  }
+
+  .avatar-card {
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .side-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .side-nav a {
+    background: transparent;
+  }
+
+  .side-nav a:hover {
+    background: #dbeafe;
+    transform: translateX(4px);
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .map-panel {
+    min-height: 260px;
+    border-radius: 36px;
+    padding: 2rem;
+  }
+
+  .map-path {
+    min-height: 220px;
+  }
+
+  .quest-grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .avatar-grid,
+  .pet-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .avatar-grid,
+  .pet-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

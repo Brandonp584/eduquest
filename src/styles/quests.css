@@ -1,0 +1,78 @@
+.quest-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.quest-card {
+  background: white;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.16);
+}
+
+.quest-image {
+  position: relative;
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #bae6fd, #dcfce7);
+}
+
+.quest-emoji {
+  font-size: 4.5rem;
+}
+
+.quest-tags {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  right: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  color: white;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.tag.year {
+  background: var(--blue);
+}
+
+.tag.subject {
+  background: var(--green);
+}
+
+.quest-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.quest-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.quest-content p {
+  color: var(--muted);
+}
+
+.quest-footer {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.xp {
+  font-weight: 700;
+}

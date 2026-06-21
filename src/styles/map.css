@@ -1,0 +1,83 @@
+.map-panel {
+  min-height: 260px;
+  border-radius: 28px;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at 20% 42%, #22c55e 0 9%, transparent 10%),
+    radial-gradient(circle at 48% 38%, #16a34a 0 9%, transparent 10%),
+    radial-gradient(circle at 73% 43%, #f97316 0 10%, transparent 11%),
+    radial-gradient(circle at 93% 38%, #7c3aed 0 13%, transparent 14%),
+    linear-gradient(135deg, #7dd3fc, #bbf7d0 45%, #fde68a 70%, #ddd6fe);
+  box-shadow: inset 0 -20px 40px rgba(255, 255, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-path {
+  position: relative;
+  height: 100%;
+  min-height: 220px;
+}
+
+.map-icon {
+  position: absolute;
+  font-size: 2.8rem;
+  z-index: 1;
+  filter: drop-shadow(0 8px 10px rgba(15, 23, 42, 0.2));
+}
+
+.castle-icon {
+  left: 35%;
+  top: 38%;
+}
+
+.tree-icon {
+  left: 47%;
+  top: 37%;
+}
+
+.mountain-icon {
+  left: 54%;
+  top: 40%;
+}
+
+.rocket-icon {
+  left: 62%;
+  top: 35%;
+}
+
+.map-node {
+  position: absolute;
+  z-index: 3;
+  padding: 0.5rem 0.8rem;
+  background: white;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  white-space: nowrap;
+}
+
+.maths {
+  left: 5%;
+  top: 58%;
+  color: var(--blue);
+}
+
+.reading {
+  left: 28%;
+  top: 24%;
+  color: var(--green);
+}
+
+.spelling {
+  right: 22%;
+  top: 55%;
+  color: var(--orange);
+}
+
+.science {
+  right: 4%;
+  top: 25%;
+  color: var(--purple);
+}
