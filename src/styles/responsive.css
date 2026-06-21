@@ -26,6 +26,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .year-tabs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .quest-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -85,6 +89,15 @@
 
   .world-panel {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .world-page-hero {
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+  }
+
+  .year-tabs {
+    grid-template-columns: repeat(8, 1fr);
   }
 
   .quest-grid {

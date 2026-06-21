@@ -1,3 +1,83 @@
+/* WORLD PAGE */
+
+.world-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.world-page-hero {
+  background: linear-gradient(135deg, #dbeafe, #dcfce7);
+  border-radius: 32px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
+}
+
+.world-page-icon {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 28px;
+  font-size: 3.5rem;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.world-page-hero h1 {
+  margin: 0.4rem 0;
+  font-size: 2.4rem;
+}
+
+.world-page-hero p {
+  color: var(--muted);
+  font-weight: 600;
+  max-width: 680px;
+}
+
+.year-level-card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.2rem;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.year-level-card h2 {
+  margin: 0;
+}
+
+/* YEAR SELECTOR */
+
+.year-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.year-tab {
+  border: none;
+  background: #eff6ff;
+  color: var(--text);
+  padding: 1rem;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.year-tab:hover {
+  background: #dbeafe;
+  transform: translateY(-2px);
+}
+
+.year-tab.active {
+  background: linear-gradient(135deg, var(--sky), var(--blue));
+  color: white;
+}
+
 /* QUEST GRID */
 
 .quest-grid {
@@ -85,43 +165,6 @@
 .xp {
   font-weight: 700;
   color: var(--blue);
-}
-
-/* YEAR SELECTOR */
-
-.year-tabs {
-  display: flex;
-  gap: 0.75rem;
-  overflow-x: auto;
-  padding: 0.5rem 0 1rem;
-  margin: 1rem 0;
-  scrollbar-width: none;
-}
-
-.year-tabs::-webkit-scrollbar {
-  display: none;
-}
-
-.year-tab {
-  border: none;
-  white-space: nowrap;
-  background: #eff6ff;
-  color: var(--text);
-  padding: 0.8rem 1rem;
-  border-radius: 999px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.year-tab:hover {
-  background: #dbeafe;
-  transform: translateY(-2px);
-}
-
-.year-tab.active {
-  background: linear-gradient(135deg, var(--sky), var(--blue));
-  color: white;
 }
 
 /* EMPTY STATE */
