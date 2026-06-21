@@ -14,6 +14,7 @@ export function getProfile() {
       selectedAvatar: "wizard",
       selectedPet: "puppy",
       ownedPets: ["puppy"],
+      lastDailyReward: null,
       ...profile,
     };
   }
@@ -26,6 +27,7 @@ export function getProfile() {
     selectedAvatar: "wizard",
     selectedPet: "puppy",
     ownedPets: ["puppy"],
+    lastDailyReward: null,
   };
 }
 

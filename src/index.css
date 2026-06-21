@@ -476,6 +476,27 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
+/* Daily Rewards */
+
+.daily-reward-card {
+  background: linear-gradient(135deg, #fef3c7, #fed7aa);
+  border-radius: 28px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.daily-reward-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.daily-reward-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* TABLET */
 
 @media (min-width: 650px) {

@@ -13,6 +13,10 @@ import {
   updatePet,
 } from "../utils/pets";
 import { getAchievements } from "../utils/achievements";
+import {
+  canClaimDailyReward,
+  claimDailyReward,
+} from "../utils/dailyRewards";
 
 export default function Profile() {
   const profile = getProfile();
@@ -20,6 +24,7 @@ export default function Profile() {
   const achievements = getAchievements(profile);
   const selectedAvatar = getSelectedAvatar();
   const selectedPet = getSelectedPet();
+  const canClaimReward = canClaimDailyReward();
 
   function handleAvatarSelect(avatarId) {
     updateAvatar(avatarId);
@@ -33,6 +38,11 @@ export default function Profile() {
 
   function handlePetSelect(petId) {
     updatePet(petId);
+    window.location.reload();
+  }
+
+  function handleDailyReward() {
+    claimDailyReward();
     window.location.reload();
   }
 
@@ -74,6 +84,19 @@ export default function Profile() {
           </div>
 
           <p>Progress to next level: {progressPercent}%</p>
+        </div>
+
+        <div className="daily-reward-card">
+          <h2>Daily Reward 🔥</h2>
+          <p>Come back every day to earn bonus coins.</p>
+
+          <button
+            className="start-btn"
+            onClick={handleDailyReward}
+            disabled={!canClaimReward}
+          >
+            {canClaimReward ? "Claim 🪙 10 Coins" : "Reward Claimed Today ✅"}
+          </button>
         </div>
 
         <h2>Choose Your Avatar 🎨</h2>
@@ -179,9 +202,7 @@ export default function Profile() {
             <div
               key={achievement.id}
               className={
-                achievement.unlocked
-                  ? "achievement unlocked"
-                  : "achievement"
+                achievement.unlocked ? "achievement unlocked" : "achievement"
               }
             >
               <span>{achievement.icon}</span>
