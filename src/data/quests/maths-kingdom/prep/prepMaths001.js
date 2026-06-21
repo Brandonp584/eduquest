@@ -5,11 +5,13 @@ const prepMaths001 = {
   title: "Counting Koalas",
   difficulty: "Beginner",
   xpReward: 30,
+  coinReward: 5,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
     learningArea: "Mathematics",
     strand: "Number",
+    code: "AC9MFN01",
     focus: "Name, represent and order numbers including zero to at least 20",
   },
 
