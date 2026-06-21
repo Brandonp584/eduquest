@@ -1,44 +1,59 @@
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import AppLayout from "../components/AppLayout";
+import { addQuestResult, getProfile, getLevel } from "../utils/profile";
 
 export default function Results() {
   const location = useLocation();
   const result = location.state;
 
+  useEffect(() => {
+    if (result) {
+      addQuestResult(result.questId, result.xpReward);
+    }
+  }, [result]);
+
   if (!result) {
     return (
-      <main>
-        <h1>No Results Found</h1>
-        <p>Please complete a quest first.</p>
-        <Link to="/">Back to Home</Link>
-      </main>
+      <AppLayout>
+        <section className="quests-section">
+          <h1>No Results Found</h1>
+          <p>Please complete a quest first.</p>
+          <Link className="start-btn" to="/">
+            Back to Home
+          </Link>
+        </section>
+      </AppLayout>
     );
   }
 
+  const profile = getProfile();
+  const level = getLevel(profile.totalXp);
   const percentage = Math.round((result.score / result.total) * 100);
 
   return (
-    <main>
-      <h1>Quest Complete!</h1>
+    <AppLayout>
+      <section className="quests-section">
+        <h1>Quest Complete! 🎉</h1>
 
-      <h2>{result.title}</h2>
+        <h2>{result.title}</h2>
 
-      <p>
-        Score: {result.score} / {result.total}
-      </p>
+        <p>
+          Score: {result.score} / {result.total}
+        </p>
 
-      <p>Accuracy: {percentage}%</p>
+        <p>Accuracy: {percentage}%</p>
+        <p>XP Earned: {result.xpReward}</p>
 
-      <p>XP Earned: {result.xpReward}</p>
+        <h3>Student Progress</h3>
+        <p>Level: {level}</p>
+        <p>Total XP: {profile.totalXp}</p>
+        <p>Quests Solved: {profile.questsSolved}</p>
 
-      {percentage === 100 ? (
-        <p>Excellent work! You solved every question.</p>
-      ) : (
-        <p>Great effort! Keep practising and try again.</p>
-      )}
-
-      <Link to="/">Choose Another Quest</Link>
-      <br />
-      <Link to="/profile">View Profile</Link>
-    </main>
+        <Link className="start-btn" to="/">
+          Choose Another Quest
+        </Link>
+      </section>
+    </AppLayout>
   );
 }
