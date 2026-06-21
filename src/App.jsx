@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import QuestPage from "./pages/QuestPage";
 import Results from "./pages/Results";
 import Profile from "./pages/Profile";
+import WorldPage from "./pages/WorldPage";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Route path="/quest/:id" element={<QuestPage />} />
       <Route path="/results" element={<Results />} />
       <Route path="/profile" element={<Profile />} />
+    <Route path="/world/:subject" element={<WorldPage />} />
     </Routes>
   );
 }

@@ -1,9 +1,11 @@
 import AppLayout from "../components/AppLayout";
 import { getProfile, getLevel } from "../utils/profile";
+import { getAchievements } from "../utils/achievements";
 
 export default function Profile() {
   const profile = getProfile();
   const level = getLevel(profile.totalXp);
+  const achievements = getAchievements(profile);
 
   const nextLevelXp =
     profile.totalXp >= 500 ? 500 :
@@ -59,25 +61,22 @@ export default function Profile() {
 
         <h2>Achievements 🏆</h2>
 
-        <div className="achievement-grid">
-          <div className={profile.questsSolved >= 1 ? "achievement unlocked" : "achievement"}>
-            <span>🌟</span>
-            <h3>First Quest</h3>
-            <p>Complete your first quest.</p>
+          <div className="achievement-grid">
+            {achievements.map((achievement) => (
+              <div
+                key={achievement.id}
+                className={
+                  achievement.unlocked
+                    ? "achievement unlocked"
+                    : "achievement"
+                }
+              >
+                <span>{achievement.icon}</span>
+                <h3>{achievement.title}</h3>
+                <p>{achievement.description}</p>
+              </div>
+            ))}
           </div>
-
-          <div className={profile.totalXp >= 100 ? "achievement unlocked" : "achievement"}>
-            <span>🧭</span>
-            <h3>Adventurer</h3>
-            <p>Earn 100 XP.</p>
-          </div>
-
-          <div className={profile.totalXp >= 250 ? "achievement unlocked" : "achievement"}>
-            <span>📚</span>
-            <h3>Scholar</h3>
-            <p>Earn 250 XP.</p>
-          </div>
-        </div>
 
         <h2>Completed Quests ✅</h2>
 

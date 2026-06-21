@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AppLayout from "../components/AppLayout";
 import QuestCard from "../components/QuestCard";
 import { quests } from "../data/quests";
@@ -23,10 +24,33 @@ export default function Home() {
 
       <section className="map-panel">
         <div className="map-path">
-          <span className="map-node maths">Maths Kingdom</span>
-          <span className="map-node reading">Reading Forest</span>
-          <span className="map-node spelling">Spelling Valley</span>
-          <span className="map-node science">Science Space</span>
+          <Link 
+            to="/world/maths"
+            className="map-node maths"
+          >
+            Maths Kingdom
+          </Link>
+
+          <Link 
+            to="/world/reading"
+            className="map-node reading"
+          >
+            Reading Forest 
+          </Link>
+
+          <Link 
+            to="/world/spelling"
+            className="map-node spelling"
+          >
+            Spelling Valley 
+          </Link>
+
+          <Link 
+            to="/world/science"
+            className="map-node science"
+          >
+            Science Space 
+          </Link>
         </div>
       </section>
 
