@@ -24,6 +24,11 @@ export default function Home() {
 
       <section className="map-panel">
         <div className="map-path">
+          <span className="map-icon castle-icon">🏰</span>
+          <span className="map-icon tree-icon">🌳</span>
+          <span className="map-icon mountain-icon">⛰️</span>
+          <span className="map-icon rocket-icon">🚀</span>
+          
           <Link 
             to="/world/maths"
             className="map-node maths"

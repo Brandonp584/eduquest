@@ -58,20 +58,37 @@ export default function Profile() {
         <h2>Choose Your Avatar 🎨</h2>
 
         <div className="avatar-grid">
-            {avatars.map((avatar) => (
-                <button 
-                    key={avatar.id}
-                    className={
-                        selectedAvatar.id === avatar.id 
-                          ? "avatar-option selected"
-                          : "avatar-option"
+          {avatars.map((avatar) => {
+            const isLocked = profile.totalXp < avatar.requiredXp;
+
+            return (
+              <button
+                key={avatar.id}
+                className={
+                  selectedAvatar.id === avatar.id
+                  ? "avatar-option selected"
+                  : isLocked
+                  ? "avatar-option locked"
+                  : "avatar-option"
+                }
+                  onClick={() => {
+                    if (!isLocked) {
+                      handleAvatarSelect(avatar.id);
                     }
-                    onClick={() => handleAvatarSelect(avatar.id)}
-                >
-                    <span>{avatar.icon}</span>
-                    <strong>{avatar.name}</strong>
-                </button>
-            ))}
+                }}
+                disabled={isLocked}
+              >
+                <span>{avatar.icon}</span>
+                <strong>{avatar.name}</strong>
+
+                {isLocked ? (
+                  <small>🔒 Unlock at {avatar.requiredXp} XP</small>
+                ) : (
+                  <small>Unlocked</small>
+                )}
+              </button>
+            );
+          })}
         </div>
 
         <div className="profile-stats">

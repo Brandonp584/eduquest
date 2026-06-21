@@ -12,6 +12,8 @@
   --muted: #64748b;
   --card: #ffffff;
   --bg: #e0f7ff;
+  --dark-card: #475569;
+  --dark-card-2: #334155;
 }
 
 * {
@@ -92,8 +94,12 @@ button {
   padding: 0.85rem 1rem;
   border-radius: 18px;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
   background: #eff6ff;
+}
+
+.side-nav a:hover {
+  background: #dbeafe;
 }
 
 .main-content {
@@ -125,74 +131,96 @@ button {
   gap: 0.3rem;
 }
 
+/* MAP */
+
 .map-panel {
-  min-height: 220px;
+  min-height: 260px;
   border-radius: 28px;
   padding: 1rem;
   background:
-    radial-gradient(circle at 20% 40%, #22c55e 0 8%, transparent 9%),
-    radial-gradient(circle at 48% 35%, #16a34a 0 10%, transparent 11%),
-    radial-gradient(circle at 72% 45%, #f97316 0 10%, transparent 11%),
-    radial-gradient(circle at 92% 35%, #7c3aed 0 12%, transparent 13%),
+    radial-gradient(circle at 20% 42%, #22c55e 0 9%, transparent 10%),
+    radial-gradient(circle at 48% 38%, #16a34a 0 9%, transparent 10%),
+    radial-gradient(circle at 73% 43%, #f97316 0 10%, transparent 11%),
+    radial-gradient(circle at 93% 38%, #7c3aed 0 13%, transparent 14%),
     linear-gradient(135deg, #7dd3fc, #bbf7d0 45%, #fde68a 70%, #ddd6fe);
   box-shadow: inset 0 -20px 40px rgba(255, 255, 255, 0.35);
   position: relative;
   overflow: hidden;
 }
 
-.map-panel::after {
-  content: "🏰 🌳 ⛰️ 🚀";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 2.5rem;
-  opacity: 0.9;
-}
-
 .map-path {
   position: relative;
-  z-index: 2;
   height: 100%;
+  min-height: 220px;
+}
+
+.map-icon {
+  position: absolute;
+  font-size: 2.8rem;
+  z-index: 1;
+  filter: drop-shadow(0 8px 10px rgba(15, 23, 42, 0.2));
+}
+
+.castle-icon {
+  left: 35%;
+  top: 38%;
+}
+
+.tree-icon {
+  left: 47%;
+  top: 37%;
+}
+
+.mountain-icon {
+  left: 54%;
+  top: 40%;
+}
+
+.rocket-icon {
+  left: 62%;
+  top: 35%;
 }
 
 .map-node {
   position: absolute;
-  padding: 0.5rem 0.75rem;
+  z-index: 3;
+  padding: 0.5rem 0.8rem;
   background: white;
   border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-size: 0.8rem;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  white-space: nowrap;
 }
 
 .maths {
   left: 5%;
-  bottom: 18%;
+  top: 58%;
   color: var(--blue);
 }
 
 .reading {
   left: 28%;
-  top: 15%;
+  top: 24%;
   color: var(--green);
 }
 
 .spelling {
   right: 22%;
-  bottom: 22%;
+  top: 55%;
   color: var(--orange);
 }
 
 .science {
   right: 4%;
-  top: 18%;
+  top: 25%;
   color: var(--purple);
 }
 
+/* SECTIONS */
+
 .quests-section {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   border-radius: 28px;
   padding: 1rem;
   box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
@@ -350,17 +378,21 @@ button {
 }
 
 .achievement {
-  opacity: 0.45;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  opacity: 1;
 }
 
 .achievement.unlocked {
-  opacity: 1;
+  background: linear-gradient(135deg, #fef9c3, #dcfce7);
   border: 3px solid var(--yellow);
 }
 
 .achievement span {
   font-size: 2.5rem;
 }
+
+/* AVATARS */
 
 .avatar-grid {
   display: grid;
@@ -370,29 +402,78 @@ button {
 }
 
 .avatar-option {
-  border: 3px solid transparent;
-  background: white;
+  min-height: 125px;
+  border: 3px solid #e2e8f0;
+  background: #ffffff;
+  color: var(--text);
   border-radius: 24px;
-  padding: 1rem;
+  padding: 1.2rem;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.45rem;
   place-items: center;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-  transition: transform 0.2s ease, border 0.2s ease;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  transition: transform 0.2s ease, border 0.2s ease, background 0.2s ease;
 }
 
 .avatar-option span {
-  font-size: 3rem;
+  font-size: 3.2rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 6px rgba(15, 23, 42, 0.15));
 }
 
-.avatar-option:hover {
+.avatar-option strong {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.avatar-option small {
+  color: #166534;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: #dcfce7;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+}
+
+.avatar-option:not(.locked):hover {
   transform: translateY(-4px);
 }
 
 .avatar-option.selected {
-  border-color: var(--yellow);
-  background: linear-gradient(135deg, #fef3c7, #dcfce7);
+  border: 3px solid var(--purple);
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+}
+
+.avatar-option.selected small {
+  background: white;
+  color: var(--purple);
+}
+
+.avatar-option.locked {
+  opacity: 1;
+  cursor: not-allowed;
+  border: 3px solid var(--dark-card-2);
+  background: linear-gradient(135deg, #64748b, #334155);
+}
+
+.avatar-option.locked span {
+  filter:
+    grayscale(1)
+    drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  opacity: 0.9;
+}
+
+.avatar-option.locked strong {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.avatar-option.locked small {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 /* TABLET */
@@ -420,7 +501,11 @@ button {
     padding: 1.5rem;
   }
 
-  .map-panel::after {
+  .map-path {
+    min-height: 220px;
+  }
+
+  .map-icon {
     font-size: 3.4rem;
   }
 
@@ -434,7 +519,7 @@ button {
   }
 
   .avatar-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -482,12 +567,21 @@ button {
     padding: 2rem;
   }
 
-  .map-panel::after {
-    content: "🏰        🌳        ⛰️        🚀";
-    font-size: 4rem;
+  .map-path {
+    min-height: 220px;
   }
 
   .quest-grid {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .avatar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .avatar-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -1,10 +1,12 @@
 const PROFILE_KEY = "eduQuestProfile";
 
 export const avatars = [
-  { id: "wizard", name: "Wizard", icon: "🧙‍♂️" },
-  { id: "astronaut", name: "Astronaut", icon: "🚀" },
-  { id: "explorer", name: "Explorer", icon: "🗺️" },
-  { id: "dragon", name: "Dragon Rider", icon: "🐉" },
+  { id: "wizard", name: "Wizard", icon: "🧙‍♂️", requiredXp: 0 },
+  { id: "astronaut", name: "Astronaut", icon: "🚀", requiredXp: 0 },
+  { id: "explorer", name: "Explorer", icon: "🗺️", requiredXp: 50 },
+  { id: "dragon", name: "Dragon Rider", icon: "🐉", requiredXp: 100 },
+  { id: "unicorn", name: "Unicorn Rider", icon: "🦄", requiredXp: 250 },
+  { id: "royal", name: "Royal Scholar", icon: "👑", requiredXp: 500 }
 ];
 
 export function getProfile() {
@@ -33,9 +35,17 @@ export function saveProfile(profile) {
 
 export function updateAvatar(avatarId) {
   const profile = getProfile();
+  const avatar = avatars.find((avatar) => avatar.id === avatarId);
+
+  if (!avatar) {
+    return profile;
+  }
+
+  if (profile.totalXp < avatar.requiredXp) {
+    return profile;
+  }
 
   profile.selectedAvatar = avatarId;
-
   saveProfile(profile);
 
   return profile;
