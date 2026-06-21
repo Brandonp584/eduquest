@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { quests } from "../data/quests";
 
 export default function Home() {
   return (
@@ -6,10 +7,19 @@ export default function Home() {
       <h1>EduQuest</h1>
       <p>Choose a learning adventure.</p>
 
-      <nav>
-        <Link to="/quest/prep-maths-001">Start First Quest</Link>
-        <Link to="/profile">View Profile</Link>
-      </nav>
+      <div>
+        {quests.map((quest) => (
+          <div key={quest.id}>
+            <h2>{quest.title}</h2>
+            <p>{quest.subject}</p>
+            <p>{quest.yearLevel}</p>
+
+            <Link to={`/quest/${quest.id}`}>
+              Start Quest
+            </Link>
+          </div>
+        ))}
+      </div>
     </main>
   );
 }
