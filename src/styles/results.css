@@ -1,0 +1,81 @@
+.results-page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.results-hero {
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #dcfce7
+  );
+  border-radius: 32px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
+}
+
+.results-badge {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.results-hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.results-message {
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.results-stats {
+  display: grid;
+  gap: 1rem;
+}
+
+.result-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.result-card span {
+  font-size: 2rem;
+}
+
+.result-card strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.result-card p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.results-profile {
+  background: white;
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.results-profile h2 {
+  margin-top: 0;
+}
+
+.results-actions {
+  display: grid;
+  gap: 1rem;
+}
+
+.results-actions .primary-btn {
+  max-width: none;
+}
