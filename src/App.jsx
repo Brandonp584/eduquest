@@ -6,9 +6,13 @@ import Profile from "./pages/Profile";
 import WorldPage from "./pages/WorldPage";
 import Shop from "./pages/Shop";
 import ParentDashboard from "./pages/ParentDashboard";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
+  <>
+    <ScrollToTop />
+
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/quest/:id" element={<QuestPage />} />
@@ -18,5 +22,6 @@ export default function App() {
       <Route path="/shop" element={<Shop />} />
       <Route path="/parent" element={<ParentDashboard />} />
     </Routes>
-  );
+  </>
+);
 }
