@@ -33,6 +33,7 @@ export default function AppLayout({ children }) {
         <nav className="side-nav">
           <Link to="/">🏠 Home</Link>
           <Link to="/profile">👤 Profile</Link>
+          <Link to="/parent">👨‍👩‍👧 Parent</Link>
           <Link to="/shop">🛒 Shop</Link>
           <Link to="/">🏆 Achievements</Link>
         </nav>

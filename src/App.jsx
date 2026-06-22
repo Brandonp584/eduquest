@@ -5,6 +5,7 @@ import Results from "./pages/Results";
 import Profile from "./pages/Profile";
 import WorldPage from "./pages/WorldPage";
 import Shop from "./pages/Shop";
+import ParentDashboard from "./pages/ParentDashboard";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/world/:subject" element={<WorldPage />} />
       <Route path="/shop" element={<Shop />} />
+      <Route path="/parent" element={<ParentDashboard />} />
     </Routes>
   );
 }

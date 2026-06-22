@@ -1,0 +1,61 @@
+.parent-page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.parent-hero {
+  background: linear-gradient(135deg, #dbeafe, #dcfce7);
+  border-radius: 32px;
+  padding: 1.75rem;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
+}
+
+.parent-hero h1 {
+  margin: 0.4rem 0;
+  font-size: 2.4rem;
+}
+
+.parent-hero p {
+  color: var(--muted);
+  font-weight: 700;
+  max-width: 680px;
+}
+
+.parent-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.parent-summary-card,
+.parent-section {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 28px;
+  padding: 1.25rem;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
+}
+
+.parent-summary-card {
+  text-align: center;
+}
+
+.parent-summary-card span {
+  font-size: 2.5rem;
+}
+
+.parent-summary-card strong {
+  display: block;
+  color: var(--blue);
+  font-size: 1.8rem;
+  margin-top: 0.35rem;
+}
+
+.parent-summary-card p {
+  color: var(--muted);
+  font-weight: 800;
+  margin: 0.35rem 0 0;
+}
+
+.parent-section h2 {
+  margin-top: 0;
+}

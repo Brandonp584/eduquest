@@ -448,3 +448,23 @@
 .theme-space .collection-card strong {
   color: #e0f2fe;
 }
+
+.theme-space .parent-hero {
+  background: linear-gradient(135deg, #1e1b4b, #0f172a);
+  color: #e0f2fe;
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+}
+
+.theme-space .parent-summary-card,
+.theme-space .parent-section {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .parent-summary-card strong,
+.theme-space .parent-summary-card p,
+.theme-space .parent-section h2 {
+  color: #e0f2fe;
+}
