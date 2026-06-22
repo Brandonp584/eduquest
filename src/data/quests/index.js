@@ -6,7 +6,7 @@ import prepReading001 from "./reading-forest/prep/prepReading001";
 import prepReading002 from "./reading-forest/prep/prepReading002";
 import prepReading003 from "./reading-forest/prep/prepReading003";
 
-import prepSpelling001 from "./spelling-kingdom/prep/prepspelling001";
+import prepSpelling001 from "./spelling-kingdom/prep/prepSpelling001";
 import prepSpelling002 from "./spelling-kingdom/prep/prepSpelling002";
 import prepSpelling003 from "./spelling-kingdom/prep/prepSpelling003";
 
