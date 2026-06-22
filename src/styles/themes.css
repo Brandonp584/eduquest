@@ -468,3 +468,15 @@
 .theme-space .parent-section h2 {
   color: #e0f2fe;
 }
+
+.theme-space .analytics-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .analytics-card h3,
+.theme-space .analytics-card p,
+.theme-space .analytics-card li {
+  color: #e0f2fe;
+}

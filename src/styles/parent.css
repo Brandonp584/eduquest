@@ -59,3 +59,35 @@
 .parent-section h2 {
   margin-top: 0;
 }
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.analytics-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.analytics-card span {
+  font-size: 2.4rem;
+}
+
+.analytics-card h3 {
+  margin: 0.5rem 0;
+}
+
+.analytics-card p,
+.analytics-card li {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.analytics-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}

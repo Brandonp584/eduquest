@@ -67,6 +67,10 @@
   .parent-summary-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */

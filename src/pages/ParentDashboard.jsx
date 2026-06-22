@@ -3,12 +3,14 @@ import { getProfile } from "../utils/profile";
 import { getLevel } from "../utils/levels";
 import { getSubjectProgress } from "../utils/progress";
 import { getCollectionStats } from "../utils/collections";
+import { getLearningAnalytics } from "../utils/analytic";
 
 export default function ParentDashboard() {
   const profile = getProfile();
   const level = getLevel(profile.totalXp);
   const subjectProgress = getSubjectProgress(profile);
   const collectionStats = getCollectionStats(profile);
+  const analytics = getLearningAnalytics(profile);
 
   return (
     <AppLayout>
@@ -76,6 +78,74 @@ export default function ParentDashboard() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="parent-section">
+          <h2>Learning Analytics 📈</h2>
+
+          <div className="analytics-grid">
+            <div className="analytics-card">
+              <span>💪</span>
+              <h3>Strengths</h3>
+
+              {analytics.strengths.length === 0 ? (
+                <p>No strong subjects yet. Keep completing quests.</p>
+              ) : (
+                <ul>
+                  {analytics.strengths.map((subject) => (
+                    <li key={subject.id}>
+                      {subject.icon} {subject.name} — {subject.percentage}%
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            <div className="analytics-card">
+              <span>📚</span>
+              <h3>Needs Practice</h3>
+
+              {analytics.needsPractice.length === 0 ? (
+                <p>No practice areas yet.</p>
+              ) : (
+                <ul>
+                  {analytics.needsPractice.map((subject) => (
+                    <li key={subject.id}>
+                      {subject.icon} {subject.name} — {subject.percentage}%
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            <div className="analytics-card">
+              <span>🏆</span>
+              <h3>Best Subject</h3>
+
+              {analytics.bestSubject ? (
+                <p>
+                  {analytics.bestSubject.icon} {analytics.bestSubject.name} —{" "}
+                  {analytics.bestSubject.percentage}%
+                </p>
+              ) : (
+                <p>No quests completed yet.</p>
+              )}
+            </div>
+
+            <div className="analytics-card">
+              <span>🎯</span>
+              <h3>Focus Area</h3>
+
+              {analytics.lowestSubject ? (
+                <p>
+                  {analytics.lowestSubject.icon} {analytics.lowestSubject.name} —{" "}
+                  {analytics.lowestSubject.percentage}%
+                </p>
+              ) : (
+                <p>No focus area yet.</p>
+              )}
+            </div>
           </div>
         </section>
 
