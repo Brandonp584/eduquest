@@ -12,11 +12,24 @@ import {
   buyTheme,
   updateTheme,
 } from "../utils/themes";
+import { useState } from "react";
+import {
+  getChestCost,
+  openMysteryChest,
+} from "../utils/mysteryChest";
 
 export default function Shop() {
   const profile = getProfile();
   const selectedPet = getSelectedPet();
   const selectedTheme = getSelectedTheme();
+
+  const [chestResult, setChestResult] = useState(null);
+  const chestCost = getChestCost();
+
+  function handleOpenChest() {
+    const result = openMysteryChest();
+    setChestResult(result);
+  }
 
   function handleBuyPet(petId) {
     buyPet(petId);
@@ -145,6 +158,41 @@ export default function Shop() {
                 </button>
               );
             })}
+          </div>
+        </section>
+
+        <section className="shop-section mystery-chest-section">
+          <h2>Mystery Chest 🎁</h2>
+          <p>Spend coins to open a chest and win a random reward.</p>
+
+          <div className="mystery-chest-card">
+            <span>🎁</span>
+            <h3>Lucky Learning Chest</h3>
+            <p>Cost: 🪙 {chestCost}</p>
+
+            <button
+              className="primary-btn"
+              onClick={handleOpenChest}
+              disabled={profile.coins < chestCost}
+            >
+              {profile.coins >= chestCost
+                ? "Open Chest"
+                : `Need 🪙 ${chestCost}`}
+            </button>
+
+            {chestResult && (
+              <div className="chest-result">
+                <strong>
+                  {chestResult.success ? "You won!" : "Not enough coins"}
+                </strong>
+
+                <p>
+                  {chestResult.reward
+                    ? `${chestResult.reward.icon} ${chestResult.reward.label}`
+                    : chestResult.message}
+                </p>
+              </div>
+            )}
           </div>
         </section>
       </section>
