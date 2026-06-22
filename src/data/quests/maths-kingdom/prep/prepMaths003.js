@@ -2,38 +2,61 @@ const prepMaths003 = {
   id: "prep-maths-003",
   yearLevel: "Prep",
   subject: "Maths",
-  title: "More or Less",
+  title: "Animal Comparisons",
   difficulty: "Beginner",
   xpReward: 30,
-  coinReward: 5,
+  coinReward: 10,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
     learningArea: "Mathematics",
     strand: "Number",
     code: "AC9MFN03",
-    focus: "Quantify and compare collections to at least 20 using counting",
+    focus:
+      "Quantify and compare collections using counting",
   },
 
-  description: "Compare small groups and choose which group has more or fewer.",
+  description:
+    "Compare groups of animals and help them find their homes.",
+
   story:
-    "Two groups of animals are waiting at the Maths Kingdom gate. Help choose which group has more or less.",
+    "The Animal Rescue Team needs help deciding which groups are bigger and smaller before bedtime.",
 
   questions: [
     {
-      question: "Which group has more? 🐶🐶 or 🐱🐱🐱",
+      question:
+        "🐶🐶 or 🐱🐱🐱 Which group has more animals?",
       options: ["Dogs", "Cats", "Same"],
       answer: "Cats",
+      topic: "Comparing Quantities",
     },
     {
-      question: "Which group has fewer? 🍎🍎🍎 or 🍌🍌",
+      question:
+        "🍎🍎🍎 or 🍌🍌 Which group has fewer items?",
       options: ["Apples", "Bananas", "Same"],
       answer: "Bananas",
+      topic: "Comparing Quantities",
     },
     {
-      question: "Which number is bigger?",
+      question:
+        "Which number is bigger?",
       options: ["6", "2", "4"],
       answer: "6",
+      topic: "Comparing Numbers",
+    },
+    {
+      question:
+        "Which number is smaller?",
+      options: ["8", "3", "5"],
+      answer: "3",
+      topic: "Comparing Numbers",
+    },
+    {
+      question:
+        "🐸🐸🐸🐸 and 🦆🦆 Which group has more animals?",
+      options: ["Frogs", "Ducks", "Same"],
+      answer: "Frogs",
+      topic: "Comparing Quantities",
     },
   ],
 };
