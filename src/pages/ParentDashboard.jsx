@@ -4,6 +4,7 @@ import { getLevel } from "../utils/levels";
 import { getSubjectProgress } from "../utils/progress";
 import { getCollectionStats } from "../utils/collections";
 import { getLearningAnalytics } from "../utils/analytic";
+import { getRecommendations } from "../utils/recommendations";
 
 export default function ParentDashboard() {
   const profile = getProfile();
@@ -11,6 +12,7 @@ export default function ParentDashboard() {
   const subjectProgress = getSubjectProgress(profile);
   const collectionStats = getCollectionStats(profile);
   const analytics = getLearningAnalytics(profile);
+  const recommendations = getRecommendations(profile);
 
   return (
     <AppLayout>
@@ -146,6 +148,25 @@ export default function ParentDashboard() {
                 <p>No focus area yet.</p>
               )}
             </div>
+          </div>
+        </section>
+
+        <section className="parent-section">
+          <h2>Recommended Learning 🧠</h2>
+
+          <div className="recommendation-grid">
+            {recommendations.map((recommendations) => (
+              <div 
+                key={recommendations.id}
+                className="recommendation-card"
+              >
+                <span>{recommendations.icon}</span>
+
+                <h3>{recommendations.title}</h3>
+
+                <p>{recommendations.reason}</p>
+              </div>
+            ))}
           </div>
         </section>
 

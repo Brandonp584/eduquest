@@ -71,6 +71,10 @@
   .analytics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .recommendation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */
