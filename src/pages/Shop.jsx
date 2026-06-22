@@ -191,6 +191,14 @@ export default function Shop() {
                     ? `${chestResult.reward.icon} ${chestResult.reward.label}`
                     : chestResult.message}
                 </p>
+
+                {chestResult.reward && (
+                  <small
+                    className={`rarity-badge ${chestResult.reward.rarity.toLowerCase()}`}
+                  >
+                    {chestResult.reward.rarity}
+                  </small>
+                )}
               </div>
             )}
           </div>

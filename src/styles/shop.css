@@ -91,3 +91,31 @@
 .chest-result strong {
   color: var(--blue);
 }
+
+.rarity-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.rarity-badge.common {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.rarity-badge.rare {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.rarity-badge.epic {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.rarity-badge.legendary {
+  background: #fef3c7;
+  color: #ca8a04;
+}
