@@ -75,6 +75,11 @@
   .recommendation-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .recommendation-banner {
+    grid-template-columns: 1fr 240px;
+    align-items: center;
+  }
 }
 
 /* DESKTOP */
