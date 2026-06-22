@@ -17,10 +17,12 @@ import {
   canClaimDailyReward,
   claimDailyReward,
 } from "../utils/dailyRewards";
+import { getSubjectProgress } from "../utils/progress";
 
 export default function Profile() {
   const profile = getProfile();
   const level = getLevel(profile.totalXp);
+  const subjectProgress = getSubjectProgress(profile);
   const achievements = getAchievements(profile);
   const selectedAvatar = getSelectedAvatar();
   const selectedPet = getSelectedPet();
@@ -193,6 +195,32 @@ export default function Profile() {
             <h3>{profile.totalXp}</h3>
             <p>Total XP</p>
           </div>
+        </div>
+
+        <h2>World Progress 📊</h2>
+
+        <div className="subject-progress-grid">
+          {subjectProgress.map((subject) => (
+            <div key={subject.id} className="subject-progress-card">
+              <span>{subject.icon}</span>
+
+              <div>
+                <h3>{subject.name}</h3>
+                <p>
+                  {subject.completedCount} / {subject.totalCount} Quest Completed 
+                </p>
+
+                <div className="subject-progress-bar">
+                  <div 
+                    className="subject-progress-fill"
+                    style={{ width: `${subject.percentage}%` }}
+                  />
+                </div>
+
+                <strong>{subject.percentage}%</strong>
+              </div>
+            </div>
+          ))}
         </div>
 
         <h2>Achievements 🏆</h2>

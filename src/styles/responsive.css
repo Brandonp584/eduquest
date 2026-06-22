@@ -51,6 +51,10 @@
   .theme-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .subject-progress-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */
