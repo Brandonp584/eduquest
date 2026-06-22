@@ -129,6 +129,11 @@
   .results-stats {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .shop-hero {
+    grid-template-columns: 1fr 220px;
+    align-items: center;
+  }
 }
 
 /* LARGE DESKTOP */
