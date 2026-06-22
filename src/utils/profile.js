@@ -17,6 +17,7 @@ export function getProfile() {
 
       selectedTheme: "default",
       ownedThemes: ["default"],
+      claimedWorldRewards: [],
 
       lastDailyReward: null,
       ...profile,
@@ -34,6 +35,7 @@ export function getProfile() {
 
     selectedTheme: "default",
     ownedThemes: ["default"],
+    claimedWorldRewards: [],
 
     lastDailyReward: null,
   };

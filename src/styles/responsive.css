@@ -55,6 +55,10 @@
   .subject-progress-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .world-reward-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */
@@ -145,6 +149,10 @@
 
   .theme-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .world-reward-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

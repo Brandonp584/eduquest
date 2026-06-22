@@ -54,3 +54,38 @@
   background: linear-gradient(135deg, var(--sky), var(--green));
   border-radius: 999px;
 }
+
+.world-reward-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.world-reward-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.2rem;
+  text-align: center;
+  display: grid;
+  gap: 0.65rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.world-reward-card > span {
+  font-size: 3rem;
+}
+
+.world-reward-card h3 {
+  margin: 0;
+}
+
+.world-reward-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.world-reward-card strong {
+  color: var(--blue);
+}

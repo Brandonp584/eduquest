@@ -18,6 +18,10 @@ import {
   claimDailyReward,
 } from "../utils/dailyRewards";
 import { getSubjectProgress } from "../utils/progress";
+import {
+  getWorldRewardStatus,
+  claimWorldReward,
+} from "../utils/worldRewards";
 
 export default function Profile() {
   const profile = getProfile();
@@ -27,6 +31,7 @@ export default function Profile() {
   const selectedAvatar = getSelectedAvatar();
   const selectedPet = getSelectedPet();
   const canClaimReward = canClaimDailyReward();
+  const worldRewards = getWorldRewardStatus();
 
   function handleAvatarSelect(avatarId) {
     updateAvatar(avatarId);
@@ -45,6 +50,11 @@ export default function Profile() {
 
   function handleDailyReward() {
     claimDailyReward();
+    window.location.reload();
+  }
+
+  function handleClaimWorldReward(worldId) {
+    claimWorldReward(worldId);
     window.location.reload();
   }
 
@@ -219,6 +229,32 @@ export default function Profile() {
 
                 <strong>{subject.percentage}%</strong>
               </div>
+            </div>
+          ))}
+        </div>
+
+        <h2>World Completion Rewards 🏆</h2>
+
+        <div className="world-reward-grid">
+          {worldRewards.map((reward) => (
+            <div key={reward.id} className="world-reward-card">
+              <span>{reward.icon}</span>
+
+              <h3>{reward.worldName}</h3>
+              <p>{reward.percentage}% complete</p>
+              <strong>{reward.rewardText}</strong>
+
+              <button
+                className="primary-btn"
+                onClick={() => handleClaimWorldReward(reward.id)}
+                disabled={!reward.canClaim}
+              >
+                {reward.isClaimed
+                  ? "Claimed ✅"
+                  : reward.canClaim
+                  ? "Claim Reward"
+                  : "Complete World First"}
+              </button>
             </div>
           ))}
         </div>

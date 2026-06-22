@@ -425,3 +425,15 @@
   background: rgba(15, 23, 42, 0.94);
   border: 1px solid rgba(125, 211, 252, 0.35);
 }
+
+.theme-space .world-reward-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .world-reward-card h3,
+.theme-space .world-reward-card p,
+.theme-space .world-reward-card strong {
+  color: #e0f2fe;
+}
