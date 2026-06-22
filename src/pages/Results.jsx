@@ -13,7 +13,8 @@ export default function Results() {
       addQuestResult(
         result.questId,
         result.xpReward,
-        result.coinReward || 5
+        result.coinReward || 5,
+        result.questionResults || []
       );
     }
   }, [result]);

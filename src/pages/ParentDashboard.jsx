@@ -6,6 +6,7 @@ import { getCollectionStats } from "../utils/collections";
 import { getLearningAnalytics } from "../utils/analytic";
 import { getRecommendations } from "../utils/recommendations";
 import { getWeeklyReport } from "../utils/weeklyReport";
+import { getWeakTopics } from "../utils/weakTopics";
 
 export default function ParentDashboard() {
   const profile = getProfile();
@@ -15,6 +16,7 @@ export default function ParentDashboard() {
   const analytics = getLearningAnalytics(profile);
   const recommendations = getRecommendations(profile);
   const weeklyReport = getWeeklyReport(profile);
+  const weakTopics = getWeakTopics(profile);
 
   return (
     <AppLayout>
@@ -175,6 +177,24 @@ export default function ParentDashboard() {
               )}
             </div>
           </div>
+        </section>
+
+        <section className="parent-section">
+          <h2>Weak Topic Detection 🎯</h2>
+
+          {weakTopics.length === 0 ? (
+            <p>No weak topics detected yet. Complete more quests to build learning insights.</p>
+          ) : (
+            <div className="weak-topic-grid">
+              {weakTopics.map((topic) => (
+                <div key={topic.topic} className="weak-topic-card">
+                  <span>🎯</span>
+                  <h3>{topic.topic}</h3>
+                  <p>{topic.mistakes} mistakes found</p>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         <section className="parent-section">

@@ -166,3 +166,30 @@
   font-weight: 800;
   margin: 0.35rem 0 0;
 }
+
+.weak-topic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.weak-topic-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.weak-topic-card span {
+  font-size: 2.5rem;
+}
+
+.weak-topic-card h3 {
+  margin: 0.5rem 0;
+}
+
+.weak-topic-card p {
+  color: var(--muted);
+  font-weight: 800;
+}

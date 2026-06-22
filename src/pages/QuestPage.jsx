@@ -54,11 +54,26 @@ export default function QuestPage() {
   function submitQuest() {
     let score = 0;
 
-    quest.questions.forEach((question, index) => {
-      if (answers[index] === question.answer) {
-        score++;
+    const questionResults = quest.questions.map(
+      (question, index) => {
+        const selectedAnswer = answers[index];
+
+        const isCorrect =
+          selectedAnswer === question.answer;
+
+        if (isCorrect) {
+          score++;
+        }
+
+        return {
+          question: question.question,
+          selectedAnswer,
+          correctAnswer: question.answer,
+          isCorrect,
+          topic: question.topic || quest.subject,
+        };
       }
-    });
+    );
 
     navigate("/results", {
       state: {
@@ -68,6 +83,7 @@ export default function QuestPage() {
         total: totalQuestions,
         xpReward: quest.xpReward,
         coinReward: quest.coinReward || 5,
+        questionResults,
       },
     });
   }

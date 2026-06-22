@@ -84,6 +84,10 @@
   .weekly-report-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .weak-topic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */
@@ -186,6 +190,10 @@
 
   .parent-summary-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .weak-topic-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

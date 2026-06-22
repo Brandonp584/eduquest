@@ -57,7 +57,8 @@ export function saveProfile(profile) {
 export function addQuestResult(
   questId,
   xpReward,
-  coinReward = 5
+  coinReward = 5,
+  questionResults = []
 ) {
   const profile = getProfile();
 
@@ -76,6 +77,7 @@ export function addQuestResult(
     questId,
     xpReward,
     coinReward,
+    questionResults,
     date: new Date().toISOString(),
   });
 
