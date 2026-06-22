@@ -5,35 +5,62 @@ const prepReading001 = {
   title: "Story Friends",
   difficulty: "Beginner",
   xpReward: 30,
-  coinReward: 5,
+  coinReward: 10,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
     learningArea: "English",
     strand: "Literature",
     code: "AC9EFLE02",
-    focus: "Respond to stories and share feelings and thoughts about events and characters",
+    focus:
+      "Respond to stories and share feelings and thoughts about events and characters",
   },
 
-  description: "Practise identifying characters and simple story events.",
+  description:
+    "Meet characters, remember story events, and talk about how characters feel.",
+
   story:
-    "In Reading Forest, a little possum meets new friends. Help remember who was in the story and what happened.",
+    "In Reading Forest, Poppy the Possum is looking for berries. Along the way, she meets kind forest friends who help her.",
 
   questions: [
     {
-      question: "Who is the animal in this story? 🐾 The possum climbed a tree.",
-      options: ["Possum", "Fish", "Duck"],
-      answer: "Possum",
+      question:
+        "🌳 Poppy the Possum climbed a tree to look for berries. Who is the main character?",
+      options: ["Poppy the Possum", "A fish", "A robot"],
+      answer: "Poppy the Possum",
+      topic: "Characters",
     },
     {
-      question: "Where did the possum climb?",
-      options: ["A tree", "A boat", "A car"],
-      answer: "A tree",
+      question:
+        "🍓 Poppy climbed the tree because she wanted to find...",
+      options: ["Berries", "Shoes", "A spaceship"],
+      answer: "Berries",
+      topic: "Story Events",
     },
     {
-      question: "How might the possum feel with new friends?",
-      options: ["Happy", "Sleepy", "Angry"],
+      question:
+        "🦉 Ollie the Owl helped Poppy find the berry path. Was Ollie being kind?",
+      options: ["Yes", "No", "Maybe not"],
+      answer: "Yes",
+      topic: "Character Feelings",
+    },
+    {
+      question:
+        "😊 How might Poppy feel when her friends help her?",
+      options: ["Happy", "Angry", "Scared"],
       answer: "Happy",
+      topic: "Character Feelings",
+    },
+    {
+      question:
+        "📖 What happened first in the story?",
+      options: [
+        "Poppy climbed a tree",
+        "Poppy flew to the moon",
+        "Poppy went swimming",
+      ],
+      answer: "Poppy climbed a tree",
+      topic: "Sequencing",
     },
   ],
 };
