@@ -502,3 +502,14 @@
 .theme-space .recommendation-banner p {
   color: #e0f2fe;
 }
+
+.theme-space .weekly-report-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .weekly-report-card strong,
+.theme-space .weekly-report-card p {
+  color: #e0f2fe;
+}

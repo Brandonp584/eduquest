@@ -5,6 +5,7 @@ import { getSubjectProgress } from "../utils/progress";
 import { getCollectionStats } from "../utils/collections";
 import { getLearningAnalytics } from "../utils/analytic";
 import { getRecommendations } from "../utils/recommendations";
+import { getWeeklyReport } from "../utils/weeklyReport";
 
 export default function ParentDashboard() {
   const profile = getProfile();
@@ -13,6 +14,7 @@ export default function ParentDashboard() {
   const collectionStats = getCollectionStats(profile);
   const analytics = getLearningAnalytics(profile);
   const recommendations = getRecommendations(profile);
+  const weeklyReport = getWeeklyReport(profile);
 
   return (
     <AppLayout>
@@ -53,6 +55,30 @@ export default function ParentDashboard() {
             <p>Current Level</p>
           </div>
         </div>
+
+        <section className="parent-section">
+          <h2>Weekly Learning Report 📈</h2>
+
+          <div className="weekly-report-grid">
+            <div className="weekly-report-card">
+              <span>📚</span>
+              <strong>{weeklyReport.questsThisWeek}</strong>
+              <p>Quests This Week</p>
+            </div>
+
+            <div className="weekly-report-card">
+              <span>⭐</span>
+              <strong>{weeklyReport.xpThisWeek}</strong>
+              <p>XP This Week</p>
+            </div>
+
+            <div className="weekly-report-card">
+              <span>🪙</span>
+              <strong>{weeklyReport.coinsThisWeek}</strong>
+              <p>Coins This Week</p>
+            </div>
+          </div>
+        </section>
 
         <section className="parent-section">
           <h2>Learning Progress 📊</h2>

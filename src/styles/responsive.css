@@ -80,6 +80,10 @@
     grid-template-columns: 1fr 240px;
     align-items: center;
   }
+
+  .weekly-report-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* DESKTOP */
