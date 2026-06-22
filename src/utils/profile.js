@@ -14,6 +14,10 @@ export function getProfile() {
       selectedAvatar: "wizard",
       selectedPet: "puppy",
       ownedPets: ["puppy"],
+
+      selectedTheme: "default",
+      ownedThemes: ["default"],
+
       lastDailyReward: null,
       ...profile,
     };
@@ -27,6 +31,10 @@ export function getProfile() {
     selectedAvatar: "wizard",
     selectedPet: "puppy",
     ownedPets: ["puppy"],
+
+    selectedTheme: "default",
+    ownedThemes: ["default"],
+
     lastDailyReward: null,
   };
 }

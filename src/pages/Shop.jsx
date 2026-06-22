@@ -6,10 +6,17 @@ import {
   buyPet,
   updatePet,
 } from "../utils/pets";
+import {
+  themes,
+  getSelectedTheme,
+  buyTheme,
+  updateTheme,
+} from "../utils/themes";
 
 export default function Shop() {
   const profile = getProfile();
   const selectedPet = getSelectedPet();
+  const selectedTheme = getSelectedTheme();
 
   function handleBuyPet(petId) {
     buyPet(petId);
@@ -18,6 +25,16 @@ export default function Shop() {
 
   function handlePetSelect(petId) {
     updatePet(petId);
+    window.location.reload();
+  }
+
+  function handleBuyTheme(themeId) {
+    buyTheme(themeId);
+    window.location.reload();
+  }
+
+  function handleThemeSelect(themeId) {
+    updateTheme(themeId);
     window.location.reload();
   }
 
@@ -77,6 +94,53 @@ export default function Shop() {
                     <small>Buy for 🪙 {pet.cost}</small>
                   ) : (
                     <small>Need 🪙 {pet.cost}</small>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="shop-section">
+          <h2>Theme Collection 🎨</h2>
+          <p>Use coins to unlock new app themes.</p>
+
+          <div className="theme-grid">
+            {themes.map((theme) => {
+              const isOwned = profile.ownedThemes.includes(theme.id);
+              const canAfford = profile.coins >= theme.cost;
+              const isSelected = selectedTheme.id === theme.id;
+
+              return (
+                <button
+                  key={theme.id}
+                  className={
+                    isSelected
+                      ? "theme-option selected"
+                      : isOwned
+                      ? "theme-option"
+                      : "theme-option locked"
+                  }
+                  onClick={() => {
+                    if (isOwned) {
+                      handleThemeSelect(theme.id);
+                    } else if (canAfford) {
+                      handleBuyTheme(theme.id);
+                    }
+                  }}
+                  disabled={!isOwned && !canAfford}
+                >
+                  <span>{theme.icon}</span>
+                  <strong>{theme.name}</strong>
+
+                  {isSelected ? (
+                    <small>Selected</small>
+                  ) : isOwned ? (
+                    <small>Use Theme</small>
+                  ) : canAfford ? (
+                    <small>Buy for 🪙 {theme.cost}</small>
+                  ) : (
+                    <small>Need 🪙 {theme.cost}</small>
                   )}
                 </button>
               );

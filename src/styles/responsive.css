@@ -47,6 +47,10 @@
   .results-stats {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .theme-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */
@@ -133,6 +137,10 @@
   .shop-hero {
     grid-template-columns: 1fr 220px;
     align-items: center;
+  }
+
+  .theme-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
