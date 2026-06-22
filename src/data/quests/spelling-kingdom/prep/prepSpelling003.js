@@ -5,7 +5,7 @@ const prepSpelling003 = {
   title: "Word Builders",
   difficulty: "Beginner",
   xpReward: 30,
-  coinReward: 5,
+  coinReward: 10,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
@@ -17,10 +17,10 @@ const prepSpelling003 = {
   },
 
   description:
-    "Build simple words using letters and sounds.",
+    "Help the Word Wizard build simple words before the Spelling Festival.",
 
   story:
-    "The Word Wizard needs help building simple words before the spelling fair begins.",
+    "The Word Wizard's spell book is missing letters. Build the words correctly to save the festival.",
 
   questions: [
     {
@@ -39,6 +39,18 @@ const prepSpelling003 = {
       question: "Which word spells SUN?",
       options: ["SUN", "USN", "NSU"],
       answer: "SUN",
+      topic: "Simple Words",
+    },
+    {
+      question: "Which word spells HAT?",
+      options: ["HTA", "HAT", "ATH"],
+      answer: "HAT",
+      topic: "Simple Words",
+    },
+    {
+      question: "Which word spells BUS?",
+      options: ["BUS", "BSU", "SUB"],
+      answer: "BUS",
       topic: "Simple Words",
     },
   ],

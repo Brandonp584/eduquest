@@ -5,7 +5,7 @@ const prepScience001 = {
   title: "Living Things",
   difficulty: "Beginner",
   xpReward: 30,
-  coinReward: 5,
+  coinReward: 10,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
@@ -15,19 +15,21 @@ const prepScience001 = {
     focus: "Observe external features of plants and animals",
   },
 
-  description: "Learn about plants, animals, and things that are living.",
+  description:
+    "Help Explorer Zara discover living things on Planet Green.",
+
   story:
-    "The Science Space explorers found a garden planet. Help them spot living things.",
+    "Explorer Zara has landed on a new planet. She needs help identifying living things.",
 
   questions: [
     {
-      question: "Which one is a living thing?",
+      question: "Which is a living thing?",
       options: ["Dog 🐶", "Rock 🪨", "Chair 🪑"],
       answer: "Dog 🐶",
       topic: "Living Things",
     },
     {
-      question: "Which one needs water to grow?",
+      question: "Which one grows?",
       options: ["Plant 🌱", "Toy 🚗", "Book 📘"],
       answer: "Plant 🌱",
       topic: "Living Things",
@@ -36,6 +38,18 @@ const prepScience001 = {
       question: "Which one is an animal?",
       options: ["Cat 🐱", "Table", "Pencil"],
       answer: "Cat 🐱",
+      topic: "Living Things",
+    },
+    {
+      question: "Which living thing needs water?",
+      options: ["Tree 🌳", "Brick", "Ball"],
+      answer: "Tree 🌳",
+      topic: "Living Things",
+    },
+    {
+      question: "Which one is alive?",
+      options: ["Bird 🐦", "Cup", "Rock"],
+      answer: "Bird 🐦",
       topic: "Living Things",
     },
   ],

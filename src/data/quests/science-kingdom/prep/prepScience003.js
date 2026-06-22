@@ -5,7 +5,7 @@ const prepScience003 = {
   title: "Materials Around Us",
   difficulty: "Beginner",
   xpReward: 30,
-  coinReward: 5,
+  coinReward: 10,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
@@ -15,9 +15,11 @@ const prepScience003 = {
     focus: "Observe and describe the properties of materials",
   },
 
-  description: "Explore what everyday objects are made from.",
+  description:
+    "Help sort objects by what they are made from.",
+
   story:
-    "The Science Space team is sorting objects by material. Help them choose what things are made from.",
+    "The Science Lab has mixed up all its materials. Help sort everything correctly.",
 
   questions: [
     {
@@ -36,6 +38,18 @@ const prepScience003 = {
       question: "Which material is soft?",
       options: ["Cotton", "Rock", "Brick"],
       answer: "Cotton",
+      topic: "Materials",
+    },
+    {
+      question: "Which material is hard?",
+      options: ["Rock", "Pillow", "Cotton"],
+      answer: "Rock",
+      topic: "Materials",
+    },
+    {
+      question: "Which material might a raincoat be made from?",
+      options: ["Plastic", "Paper", "Chocolate"],
+      answer: "Plastic",
       topic: "Materials",
     },
   ],

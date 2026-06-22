@@ -5,7 +5,7 @@ const prepSpelling002 = {
   title: "Letter Match",
   difficulty: "Beginner",
   xpReward: 30,
-  coinReward: 5,
+  coinReward: 10,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
@@ -17,10 +17,10 @@ const prepSpelling002 = {
   },
 
   description:
-    "Match capital letters with their lowercase partners.",
+    "Match uppercase and lowercase letters around Letter Castle.",
 
   story:
-    "The Letter Castle has mixed up its uppercase and lowercase letters. Help match them together.",
+    "The Letter Castle gates only open when matching letter pairs are found.",
 
   questions: [
     {
@@ -39,6 +39,18 @@ const prepSpelling002 = {
       question: "Which lowercase letter matches T?",
       options: ["f", "t", "j"],
       answer: "t",
+      topic: "Letter Recognition",
+    },
+    {
+      question: "Which lowercase letter matches P?",
+      options: ["p", "q", "b"],
+      answer: "p",
+      topic: "Letter Recognition",
+    },
+    {
+      question: "Which lowercase letter matches S?",
+      options: ["s", "c", "z"],
+      answer: "s",
       topic: "Letter Recognition",
     },
   ],

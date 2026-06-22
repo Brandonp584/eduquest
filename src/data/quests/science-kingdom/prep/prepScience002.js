@@ -5,7 +5,7 @@ const prepScience002 = {
   title: "Weather Watch",
   difficulty: "Beginner",
   xpReward: 30,
-  coinReward: 5,
+  coinReward: 10,
 
   curriculum: {
     source: "QCAA / Australian Curriculum v9.0",
@@ -15,27 +15,41 @@ const prepScience002 = {
     focus: "Describe daily and seasonal changes in the environment",
   },
 
-  description: "Observe weather and choose what you might see outside.",
+  description:
+    "Become a junior weather reporter for Science Space.",
+
   story:
-    "The Science Space weather station needs help reading the sky. Can you choose the right weather clues?",
+    "The weather station needs your help identifying different weather conditions.",
 
   questions: [
     {
       question: "What might you see on a rainy day?",
-      options: ["Rain drops 🌧️", "Snowman ⛄", "Campfire 🔥"],
-      answer: "Rain drops 🌧️",
+      options: ["Rain 🌧️", "Campfire 🔥", "Sandcastle"],
+      answer: "Rain 🌧️",
       topic: "Weather",
     },
     {
-      question: "What do we often see in the sky during the day?",
-      options: ["Sun ☀️", "Torch 🔦", "Pillow"],
+      question: "What shines during the day?",
+      options: ["Sun ☀️", "Torch", "Moon"],
       answer: "Sun ☀️",
       topic: "Weather",
     },
     {
-      question: "What can move when the wind blows?",
-      options: ["Leaves 🍃", "A wall", "A mountain"],
+      question: "What moves when the wind blows?",
+      options: ["Leaves 🍃", "Mountain", "Road"],
       answer: "Leaves 🍃",
+      topic: "Weather",
+    },
+    {
+      question: "Which weather is cold?",
+      options: ["Snow ❄️", "Sunny ☀️", "Windy 🍃"],
+      answer: "Snow ❄️",
+      topic: "Weather",
+    },
+    {
+      question: "What helps keep you dry in rain?",
+      options: ["Umbrella ☂️", "Sunglasses", "Football"],
+      answer: "Umbrella ☂️",
       topic: "Weather",
     },
   ],
