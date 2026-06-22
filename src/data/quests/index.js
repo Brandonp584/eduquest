@@ -38,6 +38,10 @@ import year2Maths001 from "./maths-kingdom/year2/year2Maths001";
 import year2Maths002 from "./maths-kingdom/year2/year2Maths002";
 import year2Maths003 from "./maths-kingdom/year2/year2Maths003";
 
+import year2Spelling001 from "./spelling-kingdom/year2/year2Spelling001";
+import year2Spelling002 from "./spelling-kingdom/year2/year2Spelling002";
+import year2Spelling003 from "./spelling-kingdom/year2/year2Spelling003";
+
 
 export const quests = [
   prepMaths001,
@@ -79,4 +83,8 @@ export const quests = [
   year2Maths001,
   year2Maths002,
   year2Maths003,
+
+  year2Spelling001,
+  year2Spelling002,
+  year2Spelling003,
 ];
