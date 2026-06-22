@@ -14,6 +14,14 @@ import prepScience001 from "./science-kingdom/prep/prepScience001";
 import prepScience002 from "./science-kingdom/prep/prepScience002";
 import prepScience003 from "./science-kingdom/prep/prepScience003";
 
+import year1Maths001 from "./maths-kingdom/year1/year1Maths001";
+import year1Maths002 from "./maths-kingdom/year1/year1Maths002";
+import year1Maths003 from "./maths-kingdom/year1/year1Maths003";
+
+import year1Reading001 from "./reading-forest/year1/year1Reading001";
+import year1Reading002 from "./reading-forest/year1/year1Reading002";
+import year1Reading003 from "./reading-forest/year1/year1Reading003";
+
 
 export const quests = [
   prepMaths001,
@@ -31,4 +39,12 @@ export const quests = [
   prepScience001,
   prepScience002,
   prepScience003,
+
+  year1Maths001,
+  year1Maths002,
+  year1Maths003,
+
+  year1Reading001,
+  year1Reading002,
+  year1Reading003
 ];
