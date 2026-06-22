@@ -1,6 +1,19 @@
 import { getSubjectProgress } from "./progress";
+import { getTopicRecommendations } from "./topicRecommendations";
 
 export function getRecommendations(profile) {
+  const topicRecommendations = getTopicRecommendations(profile);
+
+  if (topicRecommendations.length > 0) {
+    return topicRecommendations.map((topic) => ({
+      id: "maths",
+      icon: topic.icon,
+      title: topic.topic,
+      reason: topic.reason,
+      type: "topic",
+    }));
+  }
+
   const progress = getSubjectProgress(profile);
 
   const sortedSubjects = [...progress].sort(
@@ -18,6 +31,7 @@ export function getRecommendations(profile) {
       icon: lowestSubject.icon,
       title: lowestSubject.name,
       reason: `${lowestSubject.percentage}% complete — needs the most practice.`,
+      type: "subject",
     });
   }
 
@@ -27,6 +41,7 @@ export function getRecommendations(profile) {
       icon: secondLowestSubject.icon,
       title: secondLowestSubject.name,
       reason: `${secondLowestSubject.percentage}% complete — keep improving.`,
+      type: "subject",
     });
   }
 

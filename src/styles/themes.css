@@ -524,3 +524,25 @@
 .theme-space .weak-topic-card p {
   color: #e0f2fe;
 }
+
+.theme-space .topic-recommendation-card,
+.theme-space .progress-chart-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .topic-recommendation-card h3,
+.theme-space .topic-recommendation-card p,
+.theme-space .progress-chart-card p,
+.theme-space .progress-chart-header {
+  color: #e0f2fe;
+}
+
+.theme-space .progress-chart-bar {
+  background: rgba(148, 163, 184, 0.35);
+}
+
+.theme-space .progress-chart-fill {
+  background: linear-gradient(135deg, #22d3ee, #7c3aed);
+}

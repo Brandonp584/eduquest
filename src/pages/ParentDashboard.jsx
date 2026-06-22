@@ -7,6 +7,7 @@ import { getLearningAnalytics } from "../utils/analytic";
 import { getRecommendations } from "../utils/recommendations";
 import { getWeeklyReport } from "../utils/weeklyReport";
 import { getWeakTopics } from "../utils/weakTopics";
+import { getTopicRecommendations } from "../utils/topicRecommendations";
 
 export default function ParentDashboard() {
   const profile = getProfile();
@@ -17,6 +18,7 @@ export default function ParentDashboard() {
   const recommendations = getRecommendations(profile);
   const weeklyReport = getWeeklyReport(profile);
   const weakTopics = getWeakTopics(profile);
+  const topicRecommendations = getTopicRecommendations(profile);
 
   return (
     <AppLayout>
@@ -112,6 +114,34 @@ export default function ParentDashboard() {
         </section>
 
         <section className="parent-section">
+          <h2>Progress Charts 📈</h2>
+
+          <div className="progress-chart-list">
+            {subjectProgress.map((subject) => (
+              <div key={subject.id} className="progress-chart-card">
+                <div className="progress-chart-header">
+                  <strong>
+                    {subject.icon} {subject.name}
+                  </strong>
+                  <span>{subject.percentage}%</span>
+                </div>
+
+                <div className="progress-chart-bar">
+                  <div
+                    className="progress-chart-fill"
+                    style={{ width: `${subject.percentage}%` }}
+                  />
+                </div>
+
+                <p>
+                  {subject.completedCount} of {subject.totalCount} quests completed
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="parent-section">
           <h2>Learning Analytics 📈</h2>
 
           <div className="analytics-grid">
@@ -191,6 +221,27 @@ export default function ParentDashboard() {
                   <span>🎯</span>
                   <h3>{topic.topic}</h3>
                   <p>{topic.mistakes} mistakes found</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="parent-section">
+          <h2>Topic-Based Recommendations 🎯</h2>
+
+          {topicRecommendations.length === 0 ? (
+            <p>No topic recommendations yet. Complete more quests with a few mistakes to build smarter recommendations.</p>
+          ) : (
+            <div className="topic-recommendation-grid">
+              {topicRecommendations.map((recommendation) => (
+                <div
+                  key={recommendation.id}
+                  className="topic-recommendation-card"
+                >
+                  <span>{recommendation.icon}</span>
+                  <h3>{recommendation.topic}</h3>
+                  <p>{recommendation.reason}</p>
                 </div>
               ))}
             </div>
