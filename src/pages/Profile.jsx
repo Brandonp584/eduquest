@@ -22,6 +22,7 @@ import {
   getWorldRewardStatus,
   claimWorldReward,
 } from "../utils/worldRewards";
+import { getCollectionStats } from "../utils/collections";
 
 export default function Profile() {
   const profile = getProfile();
@@ -32,6 +33,7 @@ export default function Profile() {
   const selectedPet = getSelectedPet();
   const canClaimReward = canClaimDailyReward();
   const worldRewards = getWorldRewardStatus();
+  const collectionStats = getCollectionStats(profile);
 
   function handleAvatarSelect(avatarId) {
     updateAvatar(avatarId);
@@ -109,6 +111,43 @@ export default function Profile() {
           >
             {canClaimReward ? "Claim 🪙 10 Coins" : "Reward Claimed Today ✅"}
           </button>
+        </div>
+
+        <h2>Collection Book 🏅</h2>
+
+        <div className="collection-grid">
+          <div className="collection-card">
+            <span>🐾</span>
+            <h3>Pets Owned</h3>
+            <strong>
+              {collectionStats.petsOwned} / {collectionStats.totalPets}
+            </strong>
+          </div>
+
+          <div className="collection-card">
+            <span>🎨</span>
+            <h3>Themes Owned</h3>
+            <strong>
+              {collectionStats.themesOwned} / {collectionStats.totalThemes}
+            </strong>
+          </div>
+
+          <div className="collection-card">
+            <span>🏆</span>
+            <h3>Achievements</h3>
+            <strong>
+              {collectionStats.achievementsUnlocked} /{" "}
+              {collectionStats.totalAchievements}
+            </strong>
+          </div>
+
+          <div className="collection-card">
+            <span>🌎</span>
+            <h3>Worlds Completed</h3>
+            <strong>
+              {collectionStats.worldsCompleted} / {collectionStats.totalWorlds}
+            </strong>
+          </div>
         </div>
 
         <h2>Choose Your Avatar 🎨</h2>

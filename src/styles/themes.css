@@ -437,3 +437,14 @@
 .theme-space .world-reward-card strong {
   color: #e0f2fe;
 }
+
+.theme-space .collection-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .collection-card h3,
+.theme-space .collection-card strong {
+  color: #e0f2fe;
+}

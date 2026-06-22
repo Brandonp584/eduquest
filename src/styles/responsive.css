@@ -59,6 +59,10 @@
   .world-reward-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP */
@@ -152,6 +156,10 @@
   }
 
   .world-reward-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .collection-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
