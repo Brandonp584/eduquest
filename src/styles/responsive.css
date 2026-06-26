@@ -1,6 +1,42 @@
 /* TABLET */
 
 @media (min-width: 650px) {
+  body {
+    font-size: 17px;
+  }
+
+  p,
+  li,
+  small,
+  button,
+  a {
+    font-size: 1rem;
+  }
+
+  .tagline,
+  .eyebrow,
+  .tag,
+  .xp,
+  .world-card small,
+  .quest-content p,
+  .dashboard-stat p,
+  .profile-card p,
+  .shop-section p,
+  .parent-section p {
+    font-size: 0.95rem;
+  }
+
+  .side-nav a {
+    font-size: 1rem;
+  }
+
+  .primary-btn,
+  .quest-btn,
+  .secondary-btn {
+    font-size: 1rem;
+    min-height: 48px;
+  }
+
   .app-shell {
     padding: 1.25rem;
   }
@@ -97,6 +133,50 @@
 /* DESKTOP */
 
 @media (min-width: 950px) {
+  body {
+    font-size: 18px;
+  }
+
+  p,
+  li,
+  small,
+  button,
+  a {
+    font-size: 1.05rem;
+  }
+
+  .tagline,
+  .eyebrow,
+  .tag,
+  .xp,
+  .world-card small,
+  .quest-content p,
+  .dashboard-stat p,
+  .profile-card p,
+  .shop-section p,
+  .parent-section p {
+    font-size: 1rem;
+  }
+
+  .side-nav a {
+    font-size: 1.05rem;
+  }
+
+  .primary-btn,
+  .quest-btn,
+  .secondary-btn {
+    font-size: 1.05rem;
+    min-height: 52px;
+  }
+
+  .quest-content h3,
+  .world-card strong,
+  .dashboard-stat strong,
+  .result-card strong,
+  .parent-summary-card strong {
+    font-size: 1.35rem;
+  }
+
   .app-shell {
     display: grid;
     grid-template-columns: 260px 1fr;
