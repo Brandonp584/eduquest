@@ -1,0 +1,126 @@
+/* THEME SHOP CARDS */
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.theme-option {
+  min-height: 125px;
+  border: 3px solid #e2e8f0;
+  background: white;
+  color: var(--text);
+  border-radius: 24px;
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.45rem;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  transition: transform 0.2s ease, border 0.2s ease, background 0.2s ease;
+}
+
+.theme-option span {
+  font-size: 3.2rem;
+}
+
+.theme-option strong {
+  font-weight: 800;
+}
+
+.theme-option small {
+  color: #166534;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: #dcfce7;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+}
+
+.theme-option:not(.locked):hover {
+  transform: translateY(-4px);
+}
+
+.theme-option.selected {
+  border-color: var(--purple);
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+}
+
+.theme-option.locked {
+  cursor: not-allowed;
+  border-color: #334155;
+  background: linear-gradient(135deg, #64748b, #334155);
+}
+
+.theme-option.locked span {
+  filter: grayscale(1);
+}
+
+.theme-option.locked strong {
+  color: white;
+}
+
+.theme-option.locked small {
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* APP THEME VARIABLES */
+
+.theme-default {
+  --sky: #38bdf8;
+  --blue: #2563eb;
+  --yellow: #facc15;
+  --green: #22c55e;
+  --purple: #8b5cf6;
+  --orange: #fb923c;
+  --pink: #f472b6;
+  --text: #172554;
+  --muted: #64748b;
+}
+
+.theme-castle {
+  --sky: #a78bfa;
+  --blue: #4c1d95;
+  --yellow: #fbbf24;
+  --green: #65a30d;
+  --purple: #6d28d9;
+  --orange: #b45309;
+  --pink: #f0abfc;
+  --text: #2e1065;
+  --muted: #6b7280;
+}
+
+.theme-forest {
+  --sky: #86efac;
+  --blue: #166534;
+  --yellow: #ca8a04;
+  --green: #16a34a;
+  --purple: #15803d;
+  --orange: #92400e;
+  --pink: #f9a8d4;
+  --text: #052e16;
+  --muted: #4b5563;
+}
+
+.theme-space {
+  --sky: #22d3ee;
+  --blue: #312e81;
+  --yellow: #f472b6;
+  --green: #06b6d4;
+  --purple: #7c3aed;
+  --orange: #fb7185;
+  --pink: #e879f9;
+  --text: #e0f2fe;
+  --muted: #bae6fd;
+}
+
+/* APPLY THEME LOOKS */
+
+.theme-castle,
+.theme-forest,
+.theme-space {
+  transition: background 0.25s ease, color 0.25s ease;
+}

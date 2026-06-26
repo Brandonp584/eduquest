@@ -1,0 +1,268 @@
+/* SPACE THEME */
+
+.theme-space {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(34, 211, 238, 0.25), transparent 20%),
+    radial-gradient(circle at 85% 25%, rgba(168, 85, 247, 0.25), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.25), transparent 30%),
+    linear-gradient(135deg, #020617, #0f172a, #1e1b4b);
+}
+
+.theme-space .sidebar,
+.theme-space .quests-section,
+.theme-space .shop-section,
+.theme-space .results-profile,
+.theme-space .year-level-card,
+.theme-space .quest-info-card,
+.theme-space .question-card,
+.theme-space .result-card,
+.theme-space .dashboard-stat,
+.theme-space .xp-card,
+.theme-space .quest-card,
+.theme-space .shop-wallet {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border-color: rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .logo,
+.theme-space .logo span,
+.theme-space h1,
+.theme-space h2,
+.theme-space h3,
+.theme-space p,
+.theme-space strong {
+  color: #e0f2fe;
+}
+
+.theme-space .tagline,
+.theme-space .quest-content p,
+.theme-space .shop-section p,
+.theme-space .world-page-hero p,
+.theme-space .results-message,
+.theme-space .dashboard-stat p,
+.theme-space .result-card p,
+.theme-space .shop-wallet span {
+  color: #bae6fd;
+}
+
+.theme-space .side-nav a {
+  color: #e0f2fe;
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.theme-space .side-nav a:hover {
+  background: rgba(59, 130, 246, 0.35);
+}
+
+.theme-space .primary-btn,
+.theme-space .quest-btn,
+.theme-space .year-tab.active {
+  background: linear-gradient(135deg, #22d3ee, #7c3aed);
+  color: white;
+  box-shadow:
+    0 0 12px rgba(34, 211, 238, 0.35),
+    0 0 25px rgba(124, 58, 237, 0.25);
+}
+
+.theme-space .profile-card,
+.theme-space .quest-hero,
+.theme-space .world-page-hero,
+.theme-space .results-hero,
+.theme-space .shop-hero {
+  background: linear-gradient(135deg, #1e1b4b, #0f172a);
+  color: #e0f2fe;
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+}
+
+.theme-space .year-tab {
+  background: rgba(59, 130, 246, 0.18);
+  color: #e0f2fe;
+}
+
+.theme-space .empty-state {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+}
+
+.theme-space .quest-image {
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+}
+
+.theme-space .theme-option:not(.locked),
+.theme-space .pet-option:not(.locked),
+.theme-space .avatar-option:not(.locked) {
+  background: rgba(30, 41, 59, 0.95);
+  color: #e0f2fe;
+  border-color: rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .theme-option.selected,
+.theme-space .pet-option.selected,
+.theme-space .avatar-option.selected {
+  background: linear-gradient(135deg, #312e81, #7c3aed);
+  border-color: #22d3ee;
+  box-shadow:
+    0 0 15px rgba(34, 211, 238, 0.4),
+    0 0 30px rgba(124, 58, 237, 0.25);
+}
+
+.theme-space .theme-option small,
+.theme-space .pet-option small,
+.theme-space .avatar-option small {
+  color: #0f172a;
+  background: #bae6fd;
+}
+
+/* SPACE THEME FOR PROFILE + PROGRESS */
+
+.theme-space .profile-stats div,
+.theme-space .achievement,
+.theme-space .subject-progress-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .profile-stats h3,
+.theme-space .achievement h3,
+.theme-space .achievement p,
+.theme-space .subject-progress-card h3,
+.theme-space .subject-progress-card p,
+.theme-space .subject-progress-card strong {
+  color: #e0f2fe;
+}
+
+.theme-space .subject-progress-card > span {
+  background: rgba(34, 211, 238, 0.18);
+  border: 1px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .subject-progress-bar {
+  background: rgba(148, 163, 184, 0.35);
+}
+
+.theme-space .subject-progress-fill {
+  background: linear-gradient(135deg, #22d3ee, #7c3aed);
+}
+
+.theme-space .achievement.unlocked {
+  background: linear-gradient(135deg, #312e81, #0f172a);
+  border: 3px solid #22d3ee;
+}
+
+.theme-space .profile-stats div {
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.14);
+}
+
+/* SPACE THEME DAILY REWARD */
+
+.theme-space .daily-reward-card {
+  background: linear-gradient(135deg, #1e1b4b, #0f172a);
+  color: #e0f2fe;
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+}
+
+.theme-space .daily-reward-card h2,
+.theme-space .daily-reward-card p {
+  color: #e0f2fe;
+}
+
+.theme-space .daily-reward-card .primary-btn:disabled {
+  background: linear-gradient(135deg, #22d3ee, #7c3aed);
+  color: white;
+  opacity: 0.75;
+}
+
+/* SPACE THEME SHOP */
+
+.theme-space .mystery-chest-card {
+  background: linear-gradient(135deg, #312e81, #0f172a);
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+}
+
+.theme-space .chest-result {
+  background: rgba(15, 23, 42, 0.94);
+  border: 1px solid rgba(125, 211, 252, 0.35);
+}
+
+/* SPACE THEME COLLECTIONS */
+
+.theme-space .world-reward-card,
+.theme-space .collection-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .world-reward-card h3,
+.theme-space .world-reward-card p,
+.theme-space .world-reward-card strong,
+.theme-space .collection-card h3,
+.theme-space .collection-card strong {
+  color: #e0f2fe;
+}
+
+/* SPACE THEME PARENT DASHBOARD */
+
+.theme-space .parent-hero {
+  background: linear-gradient(135deg, #1e1b4b, #0f172a);
+  color: #e0f2fe;
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+}
+
+.theme-space .parent-summary-card,
+.theme-space .parent-section,
+.theme-space .analytics-card,
+.theme-space .recommendation-card,
+.theme-space .weekly-report-card,
+.theme-space .weak-topic-card,
+.theme-space .topic-recommendation-card,
+.theme-space .progress-chart-card {
+  background: rgba(15, 23, 42, 0.94);
+  color: #e0f2fe;
+  border: 2px solid rgba(125, 211, 252, 0.35);
+}
+
+.theme-space .parent-summary-card strong,
+.theme-space .parent-summary-card p,
+.theme-space .parent-section h2,
+.theme-space .analytics-card h3,
+.theme-space .analytics-card p,
+.theme-space .analytics-card li,
+.theme-space .recommendation-card h3,
+.theme-space .recommendation-card p,
+.theme-space .weekly-report-card strong,
+.theme-space .weekly-report-card p,
+.theme-space .weak-topic-card h3,
+.theme-space .weak-topic-card p,
+.theme-space .topic-recommendation-card h3,
+.theme-space .topic-recommendation-card p,
+.theme-space .progress-chart-card p,
+.theme-space .progress-chart-header {
+  color: #e0f2fe;
+}
+
+.theme-space .recommendation-banner {
+  background: linear-gradient(135deg, #1e1b4b, #0f172a);
+  color: #e0f2fe;
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+}
+
+.theme-space .recommendation-banner h2,
+.theme-space .recommendation-banner p {
+  color: #e0f2fe;
+}
+
+.theme-space .progress-chart-bar {
+  background: rgba(148, 163, 184, 0.35);
+}
+
+.theme-space .progress-chart-fill {
+  background: linear-gradient(135deg, #22d3ee, #7c3aed);
+}

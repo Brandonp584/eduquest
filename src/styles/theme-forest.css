@@ -1,0 +1,85 @@
+/* ===========================
+   FOREST THEME
+=========================== */
+
+.theme-forest {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(34, 197, 94, 0.25),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(202, 138, 4, 0.18),
+      transparent 24%
+    ),
+    linear-gradient(135deg, #ecfdf5, #dcfce7 55%, #fef3c7);
+}
+
+/* MAIN CARDS */
+
+.theme-forest .sidebar,
+.theme-forest .quests-section,
+.theme-forest .shop-section,
+.theme-forest .results-profile,
+.theme-forest .year-level-card,
+.theme-forest .quest-info-card,
+.theme-forest .question-card,
+.theme-forest .result-card,
+.theme-forest .dashboard-stat,
+.theme-forest .xp-card,
+.theme-forest .quest-card,
+.theme-forest .shop-wallet {
+  background: rgba(240, 253, 244, 0.96);
+  border-color: rgba(22, 101, 52, 0.16);
+}
+
+/* BUTTONS */
+
+.theme-forest .primary-btn,
+.theme-forest .quest-btn,
+.theme-forest .year-tab.active {
+  background: linear-gradient(135deg, #22c55e, #166534);
+  color: white;
+}
+
+/* HERO SECTIONS */
+
+.theme-forest .profile-card,
+.theme-forest .quest-hero,
+.theme-forest .world-page-hero,
+.theme-forest .results-hero,
+.theme-forest .shop-hero {
+  background: linear-gradient(135deg, #dcfce7, #fef3c7);
+  border: 2px solid rgba(22, 101, 52, 0.18);
+}
+
+/* TEXT ACCENTS */
+
+.theme-forest .logo,
+.theme-forest .dashboard-stat strong,
+.theme-forest .result-card strong,
+.theme-forest .shop-wallet span {
+  color: #166534;
+}
+
+/* SIDEBAR NAV */
+
+.theme-forest .side-nav a {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.theme-forest .side-nav a:hover {
+  background: #bbf7d0;
+}
+
+/* SELECTED ITEMS */
+
+.theme-forest .theme-option.selected,
+.theme-forest .pet-option.selected,
+.theme-forest .avatar-option.selected {
+  background: linear-gradient(135deg, #dcfce7, #fef3c7);
+  border-color: #22c55e;
+}
